@@ -1,0 +1,11 @@
+Intent intent = new Intent(MainActivity.this,MusicListActivity.class);
+        PendingIntent pendingIntent = PendingIntent.getActivity(this,0,intent,0);
+        NotificationCompat.Builder notificationBuilder = new NotificationCompat.Builder(this);
+        notificationBuilder.setSmallIcon(R.drawable.ic_launcher);
+        notificationBuilder.setContentIntent(pendingIntent);
+        notificationBuilder.setAutoCancel(true);
+        notificationBuilder.setContentTitle("Title");
+        notificationBuilder.setContentText("Content Text");
+        notificationBuilder.setSubText("Sub Text");
+        NotificationManager notificationManager = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
+        notificationManager.notify(1, notificationBuilder.build());

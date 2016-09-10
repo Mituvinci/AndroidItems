@@ -26,6 +26,9 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    public void codeShow(View view){
+        startActivity(new Intent(MainActivity.this,CodeActivity.class));
+    }
     public void notification(View view){
         Intent intent = new Intent(MainActivity.this,MusicListActivity.class);
         PendingIntent pendingIntent = PendingIntent.getActivity(this,0,intent,0);

@@ -4,14 +4,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".MainActivity">
+    tools:context=".CodeActivity">
 
     <TextView
         android:id="@+id/text"
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:text="Android Items"
-        android:onClick="codeShow"
+        android:text="Code Items"
         android:textSize="40sp" />
 
     <ScrollView
