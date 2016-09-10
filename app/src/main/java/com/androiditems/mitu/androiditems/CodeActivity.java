@@ -29,7 +29,7 @@ public class CodeActivity extends AppCompatActivity {
     public void splash(View view){
 
         Intent i = new Intent(getApplicationContext(),ShowCodeActivity.class);
-        i.putExtra(FILE,"notification.txt");
+        i.putExtra(FILE,"SplashActivity.txt");
         startActivity(i);
 
 
@@ -45,7 +45,7 @@ public class CodeActivity extends AppCompatActivity {
     public void connectivity(View view){
 
         Intent i = new Intent(getApplicationContext(),ShowCodeActivity.class);
-        i.putExtra(FILE,"notification.txt");
+        i.putExtra(FILE,"NetworkConnectivityActivity.txt");
         startActivity(i);
 
     }

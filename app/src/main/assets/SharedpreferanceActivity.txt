@@ -1,0 +1,51 @@
+package com.androiditems.mitu.androiditems.SharedPreferance;
+
+import android.content.Context;
+import android.content.SharedPreferences;
+import android.os.Bundle;
+import android.preference.PreferenceManager;
+import android.support.v7.app.AppCompatActivity;
+import android.view.View;
+import android.view.inputmethod.InputMethodManager;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
+
+import com.androiditems.mitu.androiditems.R;
+
+public class SharedpreferanceActivity extends AppCompatActivity {
+    private EditText mValueEditText;
+    private Button mOkButton;
+    private TextView mShowTextView;
+    private String mValue;
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_sharedpreferance);
+        mValueEditText = (EditText) findViewById(R.id.valueText);
+        mOkButton = (Button) findViewById(R.id.okButton);
+        mShowTextView = (TextView) findViewById(R.id.showtextView);
+        mOkButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                mValue = mValueEditText.getText().toString();
+                SharedPreferences.Editor editor = PreferenceManager.getDefaultSharedPreferences(getApplicationContext()).edit();
+                editor.putString("value", mValue);
+                editor.apply();
+                InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
+                imm.hideSoftInputFromWindow(v.getWindowToken(), InputMethodManager.RESULT_UNCHANGED_SHOWN);
+                SharedPreferences prefschck = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
+                String districtname = prefschck.getString("value", "");
+                mShowTextView.setText(districtname);
+
+            }
+        });
+
+
+
+
+
+
+    }
+}
