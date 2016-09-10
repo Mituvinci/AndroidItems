@@ -93,7 +93,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:textSize="20sp"
-                android:onClick="googlemap"
+                android:onClick="googleMap"
                 android:text="GoogleMap" />
             <TextView
                 android:id="@+id/sensorTextview"
@@ -135,21 +135,21 @@
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:textSize="20sp"
-                android:onClick="sqlitedatabase"
+                android:onClick="sqliteDatabase"
                 android:text="SQLiteDatabase" />
             <TextView
                 android:id="@+id/contentProvidersTextview"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:textSize="20sp"
-                android:onClick="contentprovider"
+                android:onClick="contentProvider"
                 android:text="ContentProvider" />
             <TextView
                 android:id="@+id/webappTextview"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:textSize="20sp"
-                android:onClick="webapp"
+                android:onClick="webApp"
                 android:text="WebApp" />
 
             <TextView
@@ -172,7 +172,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:textSize="20sp"
-                android:onClick="endlessrecycleview"
+                android:onClick="endlessRecycleview"
                 android:text="EndlessRecycleView" />
 
             <TextView
@@ -180,7 +180,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:textSize="20sp"
-                android:onClick="voicesearch"
+                android:onClick="voiceSearch"
                 android:text="Voice Search" />
 
             <TextView
@@ -188,8 +188,22 @@
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:textSize="20sp"
-                android:onClick="retorfit"
+                android:onClick="retrofit"
                 android:text="Retrofit" />
+            <TextView
+                android:id="@+id/vollyTextview"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:textSize="20sp"
+                android:onClick="volly"
+                android:text="Volly" />
+            <TextView
+                android:id="@+id/jsonTextview"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:textSize="20sp"
+                android:onClick="json"
+                android:text="JSon" />
 
             <TextView
                 android:id="@+id/glideTextview"

@@ -1,8 +1,10 @@
-package com.androiditems.mitu.androiditems;
+package com.androiditems.mitu.androiditems.Splash;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.ProgressBar;
+
+import com.androiditems.mitu.androiditems.R;
 
 public class SplashActivity extends AppCompatActivity {
 

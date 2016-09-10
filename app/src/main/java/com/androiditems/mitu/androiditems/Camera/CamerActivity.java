@@ -1,7 +1,9 @@
-package com.androiditems.mitu.androiditems;
+package com.androiditems.mitu.androiditems.Camera;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
+import com.androiditems.mitu.androiditems.R;
 
 public class CamerActivity extends AppCompatActivity {
 
