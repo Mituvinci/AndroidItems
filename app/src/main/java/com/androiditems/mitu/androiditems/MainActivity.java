@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void notification(View view){
-        Intent intent = new Intent(MainActivity.this,MainActivity.class);
+        Intent intent = new Intent(MainActivity.this,MusicListActivity.class);
         PendingIntent pendingIntent = PendingIntent.getActivity(this,0,intent,0);
         NotificationCompat.Builder notificationBuilder = new NotificationCompat.Builder(this);
         notificationBuilder.setSmallIcon(R.drawable.ic_launcher);
@@ -125,23 +125,29 @@ public class MainActivity extends AppCompatActivity {
     public void glide(View view){
 
     }
-    public void toogleButton(View view){
+    public void toggleButton(View view){
 
     }
 
-    public void facebooklogin(View view){
+    public void facebookLogin(View view){
 
     }
     public void googleLogin(View view){
 
     }
-    public void sharedprefarence(View view){
+    public void sharedPreference(View view){
 
     }
 
-    public void storedatainafile(View view){
+    public void dialog(View view){
 
     }
 
+    public void storeDatainaFile(View view){
+
+    }
+    public void login(View view){
+
+    }
 
 }

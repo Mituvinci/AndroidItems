@@ -218,7 +218,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:textSize="20sp"
-                android:onClick="toogleButton"
+                android:onClick="toggleButton"
                 android:text="Toggle Button" />
 
             <TextView
@@ -226,7 +226,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:textSize="20sp"
-                android:onClick="facebooklogin"
+                android:onClick="facebookLogin"
                 android:text="FaceBook Login" />
 
             <TextView
@@ -244,19 +244,40 @@
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:textSize="20sp"
-                android:onClick="sharedprefarence"
+                android:onClick="sharedPreference"
                 android:text="Shared Preferance" />
+
+            <TextView
+                android:id="@+id/dialogfragmentTextview"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:textSize="20sp"
+                android:onClick="dialog"
+                android:text="Show Dialog" />
 
             <TextView
                 android:id="@+id/storedatainafileTextview"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:textSize="20sp"
-                android:onClick="storedatainafile"
+                android:onClick="storeDatainaFile"
                 android:text="Store Data in File" />
 
+            <TextView
+                android:id="@+id/callTextview"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:textSize="20sp"
+                android:onClick="call"
+                android:text="Call" />
 
-
+            <TextView
+                android:id="@+id/loginTextview"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:textSize="20sp"
+                android:onClick="login"
+                android:text="Login Session Manager" />
 
 
 
