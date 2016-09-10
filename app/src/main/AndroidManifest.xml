@@ -3,6 +3,8 @@
     package="com.androiditems.mitu.androiditems" >
 
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
         android:allowBackup="true"
@@ -40,6 +42,8 @@
             android:theme="@style/AppTheme.NoActionBar" >
         </activity>
         <activity android:name=".SharedPreferance.SharedpreferanceActivity" >
+        </activity>
+        <activity android:name=".Connectivity.NetworkConnectivityActivity" >
         </activity>
     </application>
 

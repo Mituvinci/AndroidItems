@@ -8,6 +8,7 @@ import android.support.v4.app.NotificationCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
+import com.androiditems.mitu.androiditems.Connectivity.NetworkConnectivityActivity;
 import com.androiditems.mitu.androiditems.MusicPlayer.MusicListActivity;
 import com.androiditems.mitu.androiditems.Navigation.NavigationDrawerActivity;
 import com.androiditems.mitu.androiditems.Searchable.SearchActivity;
@@ -58,6 +59,8 @@ public class MainActivity extends AppCompatActivity {
         startActivity(new Intent(MainActivity.this,NavigationDrawerActivity.class));
     }
     public void connectivity(View view){
+        startActivity(new Intent(MainActivity.this,NetworkConnectivityActivity.class));
+
 
     }
     public void service(View view){
