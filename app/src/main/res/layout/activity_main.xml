@@ -150,9 +150,6 @@
                 android:onClick="gcm"
                 android:text="GCM" />
 
-
-
-
             <TextView
                 android:id="@+id/EndlessTextview"
                 android:layout_width="match_parent"
@@ -204,7 +201,19 @@
 
 
 
+            <TextView
+                android:id="@+id/sharedpreferanceTextview"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:onClick="sharedprefarence"
+                android:text="Shared Preferance" />
 
+            <TextView
+                android:id="@+id/storedatainafileTextview"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:onClick="storedatainafile"
+                android:text="Store Data in File" />
 
 
 

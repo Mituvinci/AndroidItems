@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.androiditems.mitu.androiditems" >
+
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
@@ -25,6 +26,11 @@
         <activity android:name=".SplashActivity" >
         </activity>
         <activity android:name=".CamerActivity" >
+        </activity>
+        <activity
+            android:name=".Navigation.NavigationDrawerActivity"
+            android:label="@string/title_activity_navigation_drawer"
+            android:theme="@style/AppTheme.NoActionBar" >
         </activity>
     </application>
 
