@@ -1,6 +1,5 @@
 package com.androiditems.mitu.androiditems;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.ProgressBar;
@@ -23,8 +22,7 @@ public class SplashActivity extends AppCompatActivity {
                     while (cur<end){
                         cur +=1000;
                         sleep(cur);
-                        Intent intent = new Intent(SplashActivity.this,MainActivity.class);
-                        startActivity(intent);
+
                         finish();
                     }
                 } catch (InterruptedException e) {

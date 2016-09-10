@@ -28,174 +28,198 @@
             <TextView
                 android:id="@+id/notificationButton"
                 android:layout_width="match_parent"
-                android:layout_height="30dp"
+                android:layout_height="50dp"
+                android:textSize="20sp"
                 android:layout_below="@+id/text"
+                android:onClick="notification"
                 android:text="Notification"
-                android:textSize="15sp" />
+                />
 
             <TextView
                 android:id="@+id/searchButton"
                 android:layout_width="match_parent"
-                android:layout_height="30dp"
                 android:onClick="Search"
                 android:text="Serach"
-                android:textSize="15sp"
-
+                android:layout_height="50dp"
+                android:textSize="20sp"
                 />
 
             <TextView
                 android:id="@+id/medialPlayerButton"
                 android:layout_width="match_parent"
-                android:layout_height="30dp"
                 android:onClick="MediaPlayer"
                 android:text="Music"
-                android:textSize="15sp" />
+                android:layout_height="50dp"
+                android:textSize="20sp"                />
 
             <TextView
                 android:id="@+id/splashButton"
                 android:layout_width="match_parent"
-                android:layout_height="30dp"
+                android:layout_height="50dp"
+                android:textSize="20sp"
                 android:onClick="splash"
                 android:text="Splash" />
 
             <TextView
                 android:id="@+id/cameraTextview"
                 android:layout_width="match_parent"
-                android:layout_height="30dp"
                 android:onClick="camera"
+                android:layout_height="50dp"
+                android:textSize="20sp"
                 android:text="Camera" />
             <TextView
                 android:id="@+id/connectivityTextview"
                 android:layout_width="match_parent"
-                android:layout_height="30dp"
+                android:layout_height="50dp"
+                android:textSize="20sp"
                 android:onClick="connectivity"
                 android:text="Connectivity" />
             <TextView
                 android:id="@+id/serviceTextview"
                 android:layout_width="match_parent"
-                android:layout_height="30dp"
+                android:layout_height="50dp"
+                android:textSize="20sp"
                 android:onClick="service"
                 android:text="Service" />
             <TextView
                 android:id="@+id/BroadcastTextview"
                 android:layout_width="match_parent"
-                android:layout_height="30dp"
+                android:layout_height="50dp"
+                android:textSize="20sp"
                 android:onClick="broadcast"
                 android:text="BroadCast" />
             <TextView
                 android:id="@+id/GooglemapTextview"
                 android:layout_width="match_parent"
-                android:layout_height="30dp"
+                android:layout_height="50dp"
+                android:textSize="20sp"
                 android:onClick="googlemap"
                 android:text="GoogleMap" />
             <TextView
                 android:id="@+id/sensorTextview"
                 android:layout_width="match_parent"
-                android:layout_height="30dp"
+                android:layout_height="50dp"
+                android:textSize="20sp"
                 android:onClick="sensor"
                 android:text="Sensor" />
             <TextView
                 android:id="@+id/SecuritTextview"
                 android:layout_width="match_parent"
-                android:layout_height="30dp"
+                android:layout_height="50dp"
+                android:textSize="20sp"
                 android:onClick="security"
                 android:text="Security" />
             <TextView
                 android:id="@+id/animationTextview"
                 android:layout_width="match_parent"
-                android:layout_height="30dp"
+                android:layout_height="50dp"
+                android:textSize="20sp"
                 android:onClick="animation"
                 android:text="Animation" />
             <TextView
                 android:id="@+id/navigationTextview"
                 android:layout_width="match_parent"
-                android:layout_height="30dp"
+                android:layout_height="50dp"
+                android:textSize="20sp"
                 android:onClick="navigation"
                 android:text="Navigation" />
             <TextView
                 android:id="@+id/ViewpagerTextview"
                 android:layout_width="match_parent"
-                android:layout_height="30dp"
+                android:layout_height="50dp"
+                android:textSize="20sp"
                 android:onClick="viewpager"
                 android:text="ViewPager" />
             <TextView
                 android:id="@+id/SqliteTextview"
                 android:layout_width="match_parent"
-                android:layout_height="30dp"
+                android:layout_height="50dp"
+                android:textSize="20sp"
                 android:onClick="sqlitedatabase"
                 android:text="SQLiteDatabase" />
             <TextView
                 android:id="@+id/contentProvidersTextview"
                 android:layout_width="match_parent"
-                android:layout_height="30dp"
+                android:layout_height="50dp"
+                android:textSize="20sp"
                 android:onClick="contentprovider"
                 android:text="ContentProvider" />
             <TextView
                 android:id="@+id/webappTextview"
                 android:layout_width="match_parent"
-                android:layout_height="30dp"
+                android:layout_height="50dp"
+                android:textSize="20sp"
                 android:onClick="webapp"
                 android:text="WebApp" />
 
             <TextView
                 android:id="@+id/fcmTextview"
                 android:layout_width="match_parent"
-                android:layout_height="30dp"
+                android:layout_height="50dp"
+                android:textSize="20sp"
                 android:onClick="fcm"
                 android:text="FCM" />
             <TextView
                 android:id="@+id/gcmTextview"
                 android:layout_width="match_parent"
-                android:layout_height="30dp"
+                android:layout_height="50dp"
+                android:textSize="20sp"
                 android:onClick="gcm"
                 android:text="GCM" />
 
             <TextView
                 android:id="@+id/EndlessTextview"
                 android:layout_width="match_parent"
-                android:layout_height="30dp"
+                android:layout_height="50dp"
+                android:textSize="20sp"
                 android:onClick="endlessrecycleview"
                 android:text="EndlessRecycleView" />
 
             <TextView
                 android:id="@+id/voicesearchTextview"
                 android:layout_width="match_parent"
-                android:layout_height="30dp"
+                android:layout_height="50dp"
+                android:textSize="20sp"
                 android:onClick="voicesearch"
                 android:text="Voice Search" />
 
             <TextView
                 android:id="@+id/retrofitTextview"
                 android:layout_width="match_parent"
-                android:layout_height="30dp"
+                android:layout_height="50dp"
+                android:textSize="20sp"
                 android:onClick="retorfit"
                 android:text="Retrofit" />
 
             <TextView
                 android:id="@+id/glideTextview"
                 android:layout_width="match_parent"
-                android:layout_height="30dp"
+                android:layout_height="50dp"
+                android:textSize="20sp"
                 android:onClick="glide"
                 android:text="Glide" />
 
             <TextView
                 android:id="@+id/toggleButtonTextview"
                 android:layout_width="match_parent"
-                android:layout_height="30dp"
+                android:layout_height="50dp"
+                android:textSize="20sp"
                 android:onClick="toogleButton"
                 android:text="Toggle Button" />
 
             <TextView
                 android:id="@+id/facebooklofinTextview"
                 android:layout_width="match_parent"
-                android:layout_height="30dp"
+                android:layout_height="50dp"
+                android:textSize="20sp"
                 android:onClick="facebooklogin"
                 android:text="FaceBook Login" />
 
             <TextView
                 android:id="@+id/googleloginTextview"
                 android:layout_width="match_parent"
-                android:layout_height="30dp"
+                android:layout_height="50dp"
+                android:textSize="20sp"
                 android:onClick="googleLogin"
                 android:text="Google Login" />
 
@@ -204,14 +228,16 @@
             <TextView
                 android:id="@+id/sharedpreferanceTextview"
                 android:layout_width="match_parent"
-                android:layout_height="30dp"
+                android:layout_height="50dp"
+                android:textSize="20sp"
                 android:onClick="sharedprefarence"
                 android:text="Shared Preferance" />
 
             <TextView
                 android:id="@+id/storedatainafileTextview"
                 android:layout_width="match_parent"
-                android:layout_height="30dp"
+                android:layout_height="50dp"
+                android:textSize="20sp"
                 android:onClick="storedatainafile"
                 android:text="Store Data in File" />
 
