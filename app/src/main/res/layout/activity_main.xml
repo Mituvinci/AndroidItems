@@ -64,6 +64,156 @@
                 android:layout_height="30dp"
                 android:onClick="camera"
                 android:text="Camera" />
+            <TextView
+                android:id="@+id/connectivityTextview"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:onClick="connectivity"
+                android:text="Connectivity" />
+            <TextView
+                android:id="@+id/serviceTextview"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:onClick="service"
+                android:text="Service" />
+            <TextView
+                android:id="@+id/BroadcastTextview"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:onClick="broadcast"
+                android:text="BroadCast" />
+            <TextView
+                android:id="@+id/GooglemapTextview"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:onClick="googlemap"
+                android:text="GoogleMap" />
+            <TextView
+                android:id="@+id/sensorTextview"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:onClick="sensor"
+                android:text="Sensor" />
+            <TextView
+                android:id="@+id/SecuritTextview"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:onClick="security"
+                android:text="Security" />
+            <TextView
+                android:id="@+id/animationTextview"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:onClick="animation"
+                android:text="Animation" />
+            <TextView
+                android:id="@+id/navigationTextview"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:onClick="navigation"
+                android:text="Navigation" />
+            <TextView
+                android:id="@+id/ViewpagerTextview"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:onClick="viewpager"
+                android:text="ViewPager" />
+            <TextView
+                android:id="@+id/SqliteTextview"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:onClick="sqlitedatabase"
+                android:text="SQLiteDatabase" />
+            <TextView
+                android:id="@+id/contentProvidersTextview"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:onClick="contentprovider"
+                android:text="ContentProvider" />
+            <TextView
+                android:id="@+id/webappTextview"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:onClick="webapp"
+                android:text="WebApp" />
+
+            <TextView
+                android:id="@+id/fcmTextview"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:onClick="fcm"
+                android:text="FCM" />
+            <TextView
+                android:id="@+id/gcmTextview"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:onClick="gcm"
+                android:text="GCM" />
+
+
+
+
+            <TextView
+                android:id="@+id/EndlessTextview"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:onClick="endlessrecycleview"
+                android:text="EndlessRecycleView" />
+
+            <TextView
+                android:id="@+id/voicesearchTextview"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:onClick="voicesearch"
+                android:text="Voice Search" />
+
+            <TextView
+                android:id="@+id/retrofitTextview"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:onClick="retorfit"
+                android:text="Retrofit" />
+
+            <TextView
+                android:id="@+id/glideTextview"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:onClick="glide"
+                android:text="Glide" />
+
+            <TextView
+                android:id="@+id/toggleButtonTextview"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:onClick="toogleButton"
+                android:text="Toggle Button" />
+
+            <TextView
+                android:id="@+id/facebooklofinTextview"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:onClick="facebooklogin"
+                android:text="FaceBook Login" />
+
+            <TextView
+                android:id="@+id/googleloginTextview"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:onClick="googleLogin"
+                android:text="Google Login" />
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
         </LinearLayout>
