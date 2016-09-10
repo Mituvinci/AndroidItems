@@ -9,9 +9,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
 import com.androiditems.mitu.androiditems.Connectivity.NetworkConnectivityActivity;
+import com.androiditems.mitu.androiditems.Login.LoginActivity;
 import com.androiditems.mitu.androiditems.MusicPlayer.MusicListActivity;
 import com.androiditems.mitu.androiditems.Navigation.NavigationDrawerActivity;
 import com.androiditems.mitu.androiditems.Searchable.SearchActivity;
+import com.androiditems.mitu.androiditems.SharedPreferance.SharedpreferanceActivity;
 import com.androiditems.mitu.androiditems.Splash.SplashActivity;
 
 
@@ -139,6 +141,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
     public void sharedPreference(View view){
+        startActivity(new Intent(MainActivity.this,SharedpreferanceActivity.class));
 
     }
 
@@ -150,6 +153,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
     public void login(View view){
+        startActivity(new Intent(MainActivity.this, LoginActivity.class));
 
     }
 

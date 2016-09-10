@@ -10,8 +10,8 @@
         android:id="@+id/text"
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:text="Android ITEMS"
-        android:textSize="50sp" />
+        android:text="Android Items"
+        android:textSize="40sp" />
 
     <ScrollView
         android:layout_width="match_parent"

@@ -2,12 +2,14 @@
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
     <TextView
         android:name="network check"
         android:id="@+id/intro_fragment"
         android:layout_width="match_parent"
+        android:text="NetWork Info"
+        android:layout_gravity="center"
         android:layout_height="match_parent" />
 
 </LinearLayout>
