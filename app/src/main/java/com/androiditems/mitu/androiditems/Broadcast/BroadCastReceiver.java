@@ -1,6 +1,7 @@
 package com.androiditems.mitu.androiditems.Broadcast;
 
 import android.content.BroadcastReceiver;
+import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 import android.widget.Toast;
@@ -12,6 +13,10 @@ public class BroadCastReceiver extends BroadcastReceiver {
     @Override
     public void onReceive(Context context, Intent intent) {
         Toast.makeText(context, "Intent Detected.", Toast.LENGTH_LONG).show();
-
+//        intent.setComponent(ComponentName.unflattenFromString("other.apps.package.name/.ActivityName"));
+        intent.setComponent(ComponentName.unflattenFromString("com.mitu.hi.greprep/.MainActivity"));
+        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        intent.addCategory(Intent.CATEGORY_LAUNCHER);
+        context.startActivity(intent);
     }
 }

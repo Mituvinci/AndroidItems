@@ -1,5 +1,6 @@
 package com.androiditems.mitu.androiditems.Broadcast;
 
+import android.content.ComponentName;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -19,5 +20,7 @@ public class BroadCastActivity extends AppCompatActivity {
         Intent intent = new Intent();
         intent.setAction("com.tutorialspoint.CUSTOM_INTENT");
         sendBroadcast(intent);
+
+
     }
 }
