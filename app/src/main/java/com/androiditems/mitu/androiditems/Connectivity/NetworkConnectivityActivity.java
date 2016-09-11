@@ -39,4 +39,14 @@ public class NetworkConnectivityActivity extends AppCompatActivity {
 
         }
     }
+
+    public boolean getNetworkInfo(){
+        ConnectivityManager connMgr =
+                (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
+        NetworkInfo activeInfo = connMgr.getActiveNetworkInfo();
+
+        if (activeInfo != null)
+        return true;
+        return false;
+    }
 }
