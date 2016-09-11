@@ -10,6 +10,7 @@ import android.view.View;
 
 import com.androiditems.mitu.androiditems.Broadcast.BroadCastActivity;
 import com.androiditems.mitu.androiditems.Connectivity.NetworkConnectivityActivity;
+import com.androiditems.mitu.androiditems.GoogleMap.MapsActivity;
 import com.androiditems.mitu.androiditems.Login.LoginActivity;
 import com.androiditems.mitu.androiditems.MusicPlayer.MusicListActivity;
 import com.androiditems.mitu.androiditems.Navigation.NavigationDrawerActivity;
@@ -78,6 +79,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
     public void googleMap(View view){
+        startActivity(new Intent(MainActivity.this,MapsActivity.class));
 
     }
     public void sensor(View view){
