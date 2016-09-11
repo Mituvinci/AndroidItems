@@ -51,6 +51,18 @@
         </activity>
         <activity android:name=".ShowCodeActivity" >
         </activity>
+        <activity android:name=".ViewPager.ViewPagerActivity" >
+        </activity>
+        <activity android:name=".Broadcast.BroadCastActivity" >
+        </activity>
+        <receiver android:name=".Broadcast.BroadCastReceiver">
+
+            <intent-filter>
+                <action android:name="com.tutorialspoint.CUSTOM_INTENT">
+                </action>
+            </intent-filter>
+
+        </receiver>
     </application>
 
 </manifest>

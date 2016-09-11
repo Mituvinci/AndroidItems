@@ -8,6 +8,7 @@ import android.support.v4.app.NotificationCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
+import com.androiditems.mitu.androiditems.Broadcast.BroadCastActivity;
 import com.androiditems.mitu.androiditems.Connectivity.NetworkConnectivityActivity;
 import com.androiditems.mitu.androiditems.Login.LoginActivity;
 import com.androiditems.mitu.androiditems.MusicPlayer.MusicListActivity;
@@ -15,6 +16,7 @@ import com.androiditems.mitu.androiditems.Navigation.NavigationDrawerActivity;
 import com.androiditems.mitu.androiditems.Searchable.SearchActivity;
 import com.androiditems.mitu.androiditems.SharedPreferance.SharedpreferanceActivity;
 import com.androiditems.mitu.androiditems.Splash.SplashActivity;
+import com.androiditems.mitu.androiditems.ViewPager.ViewPagerActivity;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -72,6 +74,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
     public void broadcast(View view){
+        startActivity(new Intent(MainActivity.this,BroadCastActivity.class));
 
     }
     public void googleMap(View view){
@@ -87,7 +90,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
     public void viewpager(View view){
-
+        startActivity(new Intent(MainActivity.this, ViewPagerActivity.class));
     }
     public void sqliteDatabase(View view){
 
