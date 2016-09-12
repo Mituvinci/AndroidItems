@@ -4,13 +4,50 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.LinearLayout;
+import android.widget.TextView;
 
 public class CodeActivity extends AppCompatActivity {
     private static final String FILE = "file";
+    private LinearLayout mLoginLinearLayout;
+    private TextView mLoginActivityTextView;
+    private TextView mLoginSessionManagerTextView;
+    private TextView mJustShowTextView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_code);
+        mLoginLinearLayout = (LinearLayout) findViewById(R.id.loginlinearlayout);
+        mLoginActivityTextView = (TextView) findViewById(R.id.loginTextview);
+        mLoginSessionManagerTextView = (TextView) findViewById(R.id.sessionmanagerTextview);
+        mJustShowTextView = (TextView) findViewById(R.id.justshowtext);
+        mLoginLinearLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            mLoginSessionManagerTextView.setVisibility(View.VISIBLE);
+            mLoginActivityTextView.setVisibility(View.VISIBLE);
+            mJustShowTextView.setVisibility(View.GONE);
+            }
+        });
+
+        mLoginSessionManagerTextView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getApplicationContext(),ShowCodeActivity.class);
+                i.putExtra(FILE,"SessionManager.txt");
+                startActivity(i);
+            }
+        });
+
+        mLoginActivityTextView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getApplicationContext(),ShowCodeActivity.class);
+                i.putExtra(FILE,"LoginActivity.txt");
+                startActivity(i);
+            }
+        });
     }
 
     public void notification(View view){
@@ -136,7 +173,5 @@ public class CodeActivity extends AppCompatActivity {
     public void storeDatainaFile(View view){
 
     }
-    public void login(View view){
 
-    }
 }
