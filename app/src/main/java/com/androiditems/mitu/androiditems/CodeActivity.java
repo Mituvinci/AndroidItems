@@ -11,6 +11,7 @@ public class CodeActivity extends AppCompatActivity {
     private static final String FILE = "file";
     private LinearLayout mLoginLinearLayout;
     private LinearLayout mLinearLayoutMusic;
+    private LinearLayout mLinearLayoutInnerMusic;
     private TextView mJustShowermusicTextView;
     private TextView mMusicPlayerTextView;
     private TextView mMusicListTextView;
@@ -20,6 +21,16 @@ public class CodeActivity extends AppCompatActivity {
     private TextView mLoginActivityTextView;
     private TextView mLoginSessionManagerTextView;
     private TextView mJustShowTextView;
+
+
+    private LinearLayout mVollyMainLinearLayout;
+    private LinearLayout mVollyInnerLineaLayout;
+    private TextView mJustShowVollyTextViewl;
+    private TextView mGsonTextView;
+    private TextView mGsonVollyActivityTextView;
+    private TextView mNetworkRequestTextView;
+    private TextView mVollyTextView;
+    private TextView mRequestCallbackTextView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,14 +44,80 @@ public class CodeActivity extends AppCompatActivity {
 
 
         mLinearLayoutMusic = (LinearLayout) findViewById(R.id.musicLinearlayout);
+        mLinearLayoutInnerMusic = (LinearLayout) findViewById(R.id.innerlinearMusic);
         mJustShowermusicTextView = (TextView) findViewById(R.id.justshowmusictext);
         mMusicPlayerTextView = (TextView) findViewById(R.id.medialPlayerTextview);
         mMusicListTextView = (TextView) findViewById(R.id.musiclistTextView);
         mGettingMusicTextView = (TextView) findViewById(R.id.SongListTextView);
         mRecyclerAdapterTextView = (TextView) findViewById(R.id.recyclerAdapterTextview);
 
+        mVollyMainLinearLayout = (LinearLayout) findViewById(R.id.gsonVollyTextView);
+        mVollyInnerLineaLayout = (LinearLayout) findViewById(R.id.innerlinearVolly);
+        mGsonTextView = (TextView) findViewById(R.id.gsonrequestTextview);
+        mJustShowVollyTextViewl = (TextView) findViewById(R.id.justshowvollyTextview);
+        mGsonVollyActivityTextView = (TextView) findViewById(R.id.vollyActivityTextview);
+        mNetworkRequestTextView = (TextView) findViewById(R.id.getNetworkTextview);
+        mVollyTextView = (TextView) findViewById(R.id.vollyTextview);
+        mRequestCallbackTextView = (TextView) findViewById(R.id.requestCallbackTextview);
+
+
+        volly();
         login();
         music();
+    }
+
+    public void volly(){
+        mVollyMainLinearLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                mVollyInnerLineaLayout.setVisibility(View.VISIBLE);
+                mJustShowVollyTextViewl.setVisibility(View.GONE);
+            }
+        });
+
+        mGsonTextView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getApplicationContext(),ShowCodeActivity.class);
+                i.putExtra(FILE, "GsonRequest.txt");
+                startActivity(i);
+            }
+        });
+
+        mGsonVollyActivityTextView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getApplicationContext(),ShowCodeActivity.class);
+                i.putExtra(FILE, "GsonVollyActivity.txt");
+                startActivity(i);
+            }
+        });
+
+        mVollyTextView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getApplicationContext(), ShowCodeActivity.class);
+                i.putExtra(FILE, "Volley.txt");
+                startActivity(i);
+            }
+        });
+        mNetworkRequestTextView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getApplicationContext(), ShowCodeActivity.class);
+                i.putExtra(FILE, "NetworkRequest.txt");
+                startActivity(i);
+            }
+        });
+        mRequestCallbackTextView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getApplicationContext(), ShowCodeActivity.class);
+                i.putExtra(FILE, "RequestCallback.txt");
+                startActivity(i);
+            }
+        });
     }
 
     public void music(){
@@ -49,10 +126,13 @@ public class CodeActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                mMusicPlayerTextView.setVisibility(View.VISIBLE);
+             /*   mMusicPlayerTextView.setVisibility(View.VISIBLE);
                 mMusicListTextView.setVisibility(View.VISIBLE);
                 mGettingMusicTextView.setVisibility(View.VISIBLE);
                 mRecyclerAdapterTextView.setVisibility(View.VISIBLE);
+                mJustShowermusicTextView.setVisibility(View.GONE);*/
+
+                mLinearLayoutInnerMusic.setVisibility(View.VISIBLE);
                 mJustShowermusicTextView.setVisibility(View.GONE);
             }
         });
@@ -70,7 +150,7 @@ public class CodeActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(getApplicationContext(),ShowCodeActivity.class);
-                i.putExtra(FILE,"MusicListActivity.txt");
+                i.putExtra(FILE, "MusicListActivity.txt");
                 startActivity(i);
             }
         });
@@ -78,16 +158,16 @@ public class CodeActivity extends AppCompatActivity {
         mGettingMusicTextView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(getApplicationContext(),ShowCodeActivity.class);
-                i.putExtra(FILE,"SongsList.txt");
+                Intent i = new Intent(getApplicationContext(), ShowCodeActivity.class);
+                i.putExtra(FILE, "SongsList.txt");
                 startActivity(i);
             }
         });
         mRecyclerAdapterTextView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(getApplicationContext(),ShowCodeActivity.class);
-                i.putExtra(FILE,"RecyclerViewAdapterFirstWay.txt");
+                Intent i = new Intent(getApplicationContext(), ShowCodeActivity.class);
+                i.putExtra(FILE, "RecyclerViewAdapterFirstWay.txt");
                 startActivity(i);
             }
         });
@@ -107,8 +187,8 @@ public class CodeActivity extends AppCompatActivity {
         mLoginSessionManagerTextView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(getApplicationContext(),ShowCodeActivity.class);
-                i.putExtra(FILE,"SessionManager.txt");
+                Intent i = new Intent(getApplicationContext(), ShowCodeActivity.class);
+                i.putExtra(FILE, "SessionManager.txt");
                 startActivity(i);
             }
         });
@@ -116,8 +196,8 @@ public class CodeActivity extends AppCompatActivity {
         mLoginActivityTextView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(getApplicationContext(),ShowCodeActivity.class);
-                i.putExtra(FILE,"LoginActivity.txt");
+                Intent i = new Intent(getApplicationContext(), ShowCodeActivity.class);
+                i.putExtra(FILE, "LoginActivity.txt");
                 startActivity(i);
             }
         });
@@ -132,10 +212,7 @@ public class CodeActivity extends AppCompatActivity {
     public void Search(View view){
 
     }
-    public void MediaPlayer(View view){
 
-
-    }
     public void splash(View view){
 
         Intent i = new Intent(getApplicationContext(),ShowCodeActivity.class);
@@ -197,9 +274,7 @@ public class CodeActivity extends AppCompatActivity {
 
     }
 
-    public void gcm(View view){
 
-    }
 
     public void endlessRecycleview(View view){
 
@@ -213,9 +288,7 @@ public class CodeActivity extends AppCompatActivity {
 
     }
 
-    public void volly(View view){
 
-    }
 
     public void json(View view){
 

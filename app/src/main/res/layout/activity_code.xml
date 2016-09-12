@@ -62,11 +62,13 @@
                     android:onClick="Search"
                     android:text="Serach"
                     android:textSize="20sp" />
+
                 <LinearLayout
+                    android:id="@+id/musicLinearlayout"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:id="@+id/musicLinearlayout"
                     android:orientation="vertical">
+
                     <TextView
                         android:id="@+id/justshowmusictext"
                         android:layout_width="match_parent"
@@ -76,42 +78,56 @@
                         android:text="Music"
                         android:textSize="20sp" />
 
-                <TextView
-                    android:id="@+id/musiclistTextView"
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:layout_gravity="center"
-                    android:gravity="center"
-                    android:visibility="gone"
-                    android:text="Music List"
-                    android:textSize="20sp" />
-                    <TextView
-                        android:id="@+id/SongListTextView"
+                    <LinearLayout
+                        android:id="@+id/innerlinearMusic"
                         android:layout_width="match_parent"
-                        android:layout_height="50dp"
-                        android:layout_gravity="center"
-                        android:gravity="center"
-                        android:visibility="gone"
-                        android:text="getting song from memory"
-                        android:textSize="20sp" />
-                    <TextView
-                        android:id="@+id/medialPlayerTextview"
-                        android:layout_width="match_parent"
-                        android:layout_height="50dp"
-                        android:layout_gravity="center"
-                        android:gravity="center"
-                        android:visibility="gone"
-                        android:text="Music Player"
-                        android:textSize="20sp" />
-                    <TextView
-                        android:id="@+id/recyclerAdapterTextview"
-                        android:layout_width="match_parent"
-                        android:layout_height="50dp"
-                        android:layout_gravity="center"
-                        android:gravity="center"
-                        android:visibility="gone"
-                        android:text="Recycler Adapter"
-                        android:textSize="20sp" />
+                        android:layout_height="wrap_content"
+                        android:background="#C6DEFC"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+
+                        <TextView
+                            android:id="@+id/musiclistTextView"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:text="Music List"
+                            android:textSize="20sp"
+                             />
+
+                        <TextView
+                            android:id="@+id/SongListTextView"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:text="getting song from memory"
+                            android:textSize="20sp"
+                             />
+
+                        <TextView
+                            android:id="@+id/medialPlayerTextview"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:text="Music Player"
+                            android:textSize="20sp"
+                             />
+
+                        <TextView
+                            android:id="@+id/recyclerAdapterTextview"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:text="Recycler Adapter"
+                            android:textSize="20sp"
+                            />
+
+                    </LinearLayout>
 
 
                 </LinearLayout>
@@ -297,15 +313,76 @@
                     android:text="Retrofit"
                     android:textSize="20sp" />
 
-                <TextView
-                    android:id="@+id/vollyTextview"
+                <LinearLayout
+                    android:id="@+id/gsonVollyTextView"
                     android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:layout_gravity="center"
-                    android:gravity="center"
-                    android:onClick="volly"
-                    android:text="Gson Volly"
-                    android:textSize="20sp" />
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/justshowvollyTextview"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:text="Gson Volly"
+                        android:textSize="20sp" />
+
+                    <LinearLayout
+                        android:id="@+id/innerlinearVolly"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#C6DEFC"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:id="@+id/vollyActivityTextview"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:text="Volly Activity"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/vollyTextview"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:text="Volly"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/gsonrequestTextview"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:text="Gson Request"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/getNetworkTextview"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:text="NetWork Request"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/requestCallbackTextview"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:text="Interface Request Callback"
+                            android:textSize="20sp" />
+                    </LinearLayout>
+
+                </LinearLayout>
 
                 <TextView
                     android:id="@+id/jsonTextview"
@@ -397,37 +474,41 @@
                     android:onClick="call"
                     android:text="Call"
                     android:textSize="20sp" />
+
                 <LinearLayout
+                    android:id="@+id/loginlinearlayout"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:id="@+id/loginlinearlayout">
+                    android:orientation="vertical">
+
                     <TextView
+                        android:id="@+id/justshowtext"
                         android:layout_width="match_parent"
                         android:layout_height="50dp"
                         android:layout_gravity="center"
                         android:gravity="center"
                         android:text="Login"
-                        android:id="@+id/justshowtext"
                         android:textSize="20sp" />
-                <TextView
-                    android:id="@+id/loginTextview"
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:layout_gravity="center"
-                    android:gravity="center"
-                    android:visibility="gone"
-                    android:text="Login Activity"
-                    android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/loginTextview"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:text="Login Activity"
+                        android:textSize="20sp"
+                        android:visibility="gone" />
+
                     <TextView
                         android:id="@+id/sessionmanagerTextview"
                         android:layout_width="match_parent"
                         android:layout_height="50dp"
                         android:layout_gravity="center"
                         android:gravity="center"
-                        android:visibility="gone"
                         android:text="Login SessionManager"
-                        android:textSize="20sp" />
+                        android:textSize="20sp"
+                        android:visibility="gone" />
 
                 </LinearLayout>
 
