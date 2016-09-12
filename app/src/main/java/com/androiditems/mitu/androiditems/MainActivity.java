@@ -10,6 +10,7 @@ import android.view.View;
 
 import com.androiditems.mitu.androiditems.Broadcast.BroadCastActivity;
 import com.androiditems.mitu.androiditems.Connectivity.NetworkConnectivityActivity;
+import com.androiditems.mitu.androiditems.FCM.FireBaseActivity;
 import com.androiditems.mitu.androiditems.GoogleMap.MapsActivity;
 import com.androiditems.mitu.androiditems.GsonVolly.GsonVollyActivity;
 import com.androiditems.mitu.androiditems.Login.LoginActivity;
@@ -109,6 +110,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void fcm(View view){
+        startActivity(new Intent(MainActivity.this, FireBaseActivity.class));
 
     }
 
