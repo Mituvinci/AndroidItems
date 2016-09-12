@@ -10,24 +10,97 @@ import android.widget.TextView;
 public class CodeActivity extends AppCompatActivity {
     private static final String FILE = "file";
     private LinearLayout mLoginLinearLayout;
+    private LinearLayout mLinearLayoutMusic;
+    private TextView mJustShowermusicTextView;
+    private TextView mMusicPlayerTextView;
+    private TextView mMusicListTextView;
+    private TextView mGettingMusicTextView;
+    private TextView mRecyclerAdapterTextView;
+
     private TextView mLoginActivityTextView;
     private TextView mLoginSessionManagerTextView;
     private TextView mJustShowTextView;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_code);
+
         mLoginLinearLayout = (LinearLayout) findViewById(R.id.loginlinearlayout);
         mLoginActivityTextView = (TextView) findViewById(R.id.loginTextview);
         mLoginSessionManagerTextView = (TextView) findViewById(R.id.sessionmanagerTextview);
         mJustShowTextView = (TextView) findViewById(R.id.justshowtext);
+
+
+        mLinearLayoutMusic = (LinearLayout) findViewById(R.id.musicLinearlayout);
+        mJustShowermusicTextView = (TextView) findViewById(R.id.justshowmusictext);
+        mMusicPlayerTextView = (TextView) findViewById(R.id.medialPlayerTextview);
+        mMusicListTextView = (TextView) findViewById(R.id.musiclistTextView);
+        mGettingMusicTextView = (TextView) findViewById(R.id.SongListTextView);
+        mRecyclerAdapterTextView = (TextView) findViewById(R.id.recyclerAdapterTextview);
+
+        login();
+        music();
+    }
+
+    public void music(){
+
+        mLinearLayoutMusic.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                mMusicPlayerTextView.setVisibility(View.VISIBLE);
+                mMusicListTextView.setVisibility(View.VISIBLE);
+                mGettingMusicTextView.setVisibility(View.VISIBLE);
+                mRecyclerAdapterTextView.setVisibility(View.VISIBLE);
+                mJustShowermusicTextView.setVisibility(View.GONE);
+            }
+        });
+
+        mMusicPlayerTextView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getApplicationContext(),ShowCodeActivity.class);
+                i.putExtra(FILE, "MusicPlayer.txt");
+                startActivity(i);
+            }
+        });
+
+        mMusicListTextView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getApplicationContext(),ShowCodeActivity.class);
+                i.putExtra(FILE,"MusicListActivity.txt");
+                startActivity(i);
+            }
+        });
+
+        mGettingMusicTextView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getApplicationContext(),ShowCodeActivity.class);
+                i.putExtra(FILE,"SongsList.txt");
+                startActivity(i);
+            }
+        });
+        mRecyclerAdapterTextView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getApplicationContext(),ShowCodeActivity.class);
+                i.putExtra(FILE,"RecyclerViewAdapterFirstWay.txt");
+                startActivity(i);
+            }
+        });
+    }
+
+    public void login(){
         mLoginLinearLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-            mLoginSessionManagerTextView.setVisibility(View.VISIBLE);
-            mLoginActivityTextView.setVisibility(View.VISIBLE);
-            mJustShowTextView.setVisibility(View.GONE);
+                mLoginSessionManagerTextView.setVisibility(View.VISIBLE);
+                mLoginActivityTextView.setVisibility(View.VISIBLE);
+                mJustShowTextView.setVisibility(View.GONE);
             }
         });
 

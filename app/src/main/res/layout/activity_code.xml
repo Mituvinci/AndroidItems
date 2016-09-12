@@ -20,7 +20,7 @@
             android:layout_gravity="center"
             android:background="#FFFFFF"
             android:gravity="center"
-            android:text="Android Items"
+            android:text="Raw Code"
             android:textSize="25sp" />
     </LinearLayout>
 
@@ -62,16 +62,59 @@
                     android:onClick="Search"
                     android:text="Serach"
                     android:textSize="20sp" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/musicLinearlayout"
+                    android:orientation="vertical">
+                    <TextView
+                        android:id="@+id/justshowmusictext"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:text="Music"
+                        android:textSize="20sp" />
 
                 <TextView
-                    android:id="@+id/medialPlayerButton"
+                    android:id="@+id/musiclistTextView"
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
                     android:layout_gravity="center"
                     android:gravity="center"
-                    android:onClick="MediaPlayer"
-                    android:text="Music"
+                    android:visibility="gone"
+                    android:text="Music List"
                     android:textSize="20sp" />
+                    <TextView
+                        android:id="@+id/SongListTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:visibility="gone"
+                        android:text="getting song from memory"
+                        android:textSize="20sp" />
+                    <TextView
+                        android:id="@+id/medialPlayerTextview"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:visibility="gone"
+                        android:text="Music Player"
+                        android:textSize="20sp" />
+                    <TextView
+                        android:id="@+id/recyclerAdapterTextview"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:visibility="gone"
+                        android:text="Recycler Adapter"
+                        android:textSize="20sp" />
+
+
+                </LinearLayout>
 
                 <TextView
                     android:id="@+id/splashButton"
