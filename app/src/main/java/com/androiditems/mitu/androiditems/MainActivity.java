@@ -21,6 +21,7 @@ import com.androiditems.mitu.androiditems.Navigation.NavigationDrawerActivity;
 import com.androiditems.mitu.androiditems.Searchable.SearchActivity;
 import com.androiditems.mitu.androiditems.SharedPreferance.SharedpreferanceActivity;
 import com.androiditems.mitu.androiditems.Splash.SplashActivity;
+import com.androiditems.mitu.androiditems.SqLiteDatabase.DataBaseActivity;
 import com.androiditems.mitu.androiditems.ViewPager.ViewPagerActivity;
 
 
@@ -100,6 +101,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void sqliteDatabase(View view){
+        startActivity(new Intent(MainActivity.this, DataBaseActivity.class));
 
     }
 

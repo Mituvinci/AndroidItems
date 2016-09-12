@@ -33,6 +33,23 @@ public class CodeActivity extends AppCompatActivity {
     private TextView mVollyTextView;
     private TextView mRequestCallbackTextView;
 
+    private LinearLayout mBroadcastMainLinearlayout;
+    private LinearLayout mBroadcastInnerLinearLayout;
+    private TextView mJustShowBroadcastTextView;
+    private TextView mManifestTextView;
+    private TextView mBroadCastTextView;
+    private TextView mBroadCastRecieverTextView;
+
+
+    private LinearLayout mPushnotificationMainLinearlayout;
+    private LinearLayout mPushnotificationInnerLinearLayout;
+    private TextView mJustShowPushnotificationTextView;
+    private TextView mManifestPushnotificationTextView;
+    private TextView mPushnotificationActivityTextView;
+    private TextView mPushnotificationInstanceIdTextView;
+    private TextView mPushnotificationMessagingTextView;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -63,9 +80,116 @@ public class CodeActivity extends AppCompatActivity {
         mRequestCallbackTextView = (TextView) findViewById(R.id.requestCallbackTextview);
 
 
+        mBroadcastMainLinearlayout = (LinearLayout) findViewById(R.id.BroadcastLinearLayout);
+        mBroadcastInnerLinearLayout = (LinearLayout) findViewById(R.id.innerlinearBroadcast);
+        mJustShowBroadcastTextView = (TextView) findViewById(R.id.justshowBroadcastTextview);
+        mManifestTextView = (TextView) findViewById(R.id.BroadcasManifestTextview);
+        mBroadCastTextView = (TextView) findViewById(R.id.BroadcastActivityTextview);
+        mBroadCastRecieverTextView = (TextView) findViewById(R.id.BroadcastRecieverTextview);
+
+
+        mPushnotificationMainLinearlayout = (LinearLayout) findViewById(R.id.pushnotificationLinearlayout);
+        mPushnotificationInnerLinearLayout = (LinearLayout) findViewById(R.id.innerlinearpushnotification);
+        mJustShowPushnotificationTextView = (TextView) findViewById(R.id.justshopushnotificationTextview);
+        mManifestPushnotificationTextView = (TextView) findViewById(R.id.firabseManifestTextview);
+        mPushnotificationActivityTextView = (TextView) findViewById(R.id.pushActivityTextview);
+        mPushnotificationInstanceIdTextView = (TextView) findViewById(R.id.firebaseInstanceidTextview);
+        mPushnotificationMessagingTextView = (TextView) findViewById(R.id.firebaseMessagingTextview);
+
+        pushNotification();
+        broadcast();
         volly();
         login();
         music();
+    }
+
+    public void pushNotification(){
+
+        mPushnotificationMainLinearlayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                mPushnotificationInnerLinearLayout.setVisibility(View.VISIBLE);
+                mJustShowPushnotificationTextView.setVisibility(View.GONE);
+            }
+        });
+
+        mManifestPushnotificationTextView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getApplicationContext(),ShowCodeActivity.class);
+                i.putExtra(FILE, "AndroidManifestFirebase.txt");
+                startActivity(i);
+            }
+        });
+
+        mPushnotificationActivityTextView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getApplicationContext(),ShowCodeActivity.class);
+                i.putExtra(FILE, "MainActivityFirebase.txt");
+                startActivity(i);
+            }
+        });
+
+        mPushnotificationInstanceIdTextView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getApplicationContext(), ShowCodeActivity.class);
+                i.putExtra(FILE, "MyFirebaseInstanceIDService.txt");
+                startActivity(i);
+            }
+        });
+
+        mPushnotificationMessagingTextView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getApplicationContext(), ShowCodeActivity.class);
+                i.putExtra(FILE, "MyFirebaseMessagingService.txt");
+                startActivity(i);
+            }
+        });
+
+    }
+
+    public void broadcast(){
+
+        mBroadcastMainLinearlayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                mBroadcastInnerLinearLayout.setVisibility(View.VISIBLE);
+                mJustShowBroadcastTextView.setVisibility(View.GONE);
+            }
+        });
+
+        mManifestTextView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getApplicationContext(),ShowCodeActivity.class);
+                i.putExtra(FILE, "AndroidManifest.txt");
+                startActivity(i);
+            }
+        });
+
+        mBroadCastTextView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getApplicationContext(),ShowCodeActivity.class);
+                i.putExtra(FILE, "BroadCastActivity.txt");
+                startActivity(i);
+            }
+        });
+
+        mBroadCastRecieverTextView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getApplicationContext(), ShowCodeActivity.class);
+                i.putExtra(FILE, "BroadCastReceiver.txt");
+                startActivity(i);
+            }
+        });
+
     }
 
     public void volly(){
@@ -127,12 +251,6 @@ public class CodeActivity extends AppCompatActivity {
         mLinearLayoutMusic.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-             /*   mMusicPlayerTextView.setVisibility(View.VISIBLE);
-                mMusicListTextView.setVisibility(View.VISIBLE);
-                mGettingMusicTextView.setVisibility(View.VISIBLE);
-                mRecyclerAdapterTextView.setVisibility(View.VISIBLE);
-                mJustShowermusicTextView.setVisibility(View.GONE);*/
 
                 mLinearLayoutInnerMusic.setVisibility(View.VISIBLE);
                 mJustShowermusicTextView.setVisibility(View.GONE);
@@ -241,9 +359,7 @@ public class CodeActivity extends AppCompatActivity {
     public void service(View view){
 
     }
-    public void broadcast(View view){
 
-    }
     public void googleMap(View view){
 
     }
@@ -274,9 +390,7 @@ public class CodeActivity extends AppCompatActivity {
 
     }
 
-    public void fcm(View view){
 
-    }
 
 
 

@@ -94,8 +94,7 @@
                             android:layout_gravity="center"
                             android:gravity="center"
                             android:text="Music List"
-                            android:textSize="20sp"
-                             />
+                            android:textSize="20sp" />
 
                         <TextView
                             android:id="@+id/SongListTextView"
@@ -104,8 +103,7 @@
                             android:layout_gravity="center"
                             android:gravity="center"
                             android:text="getting song from memory"
-                            android:textSize="20sp"
-                             />
+                            android:textSize="20sp" />
 
                         <TextView
                             android:id="@+id/medialPlayerTextview"
@@ -114,8 +112,7 @@
                             android:layout_gravity="center"
                             android:gravity="center"
                             android:text="Music Player"
-                            android:textSize="20sp"
-                             />
+                            android:textSize="20sp" />
 
                         <TextView
                             android:id="@+id/recyclerAdapterTextview"
@@ -124,8 +121,7 @@
                             android:layout_gravity="center"
                             android:gravity="center"
                             android:text="Recycler Adapter"
-                            android:textSize="20sp"
-                            />
+                            android:textSize="20sp" />
 
                     </LinearLayout>
 
@@ -172,15 +168,57 @@
                     android:text="Service"
                     android:textSize="20sp" />
 
-                <TextView
-                    android:id="@+id/BroadcastTextview"
+                <LinearLayout
+                    android:id="@+id/BroadcastLinearLayout"
                     android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:layout_gravity="center"
-                    android:gravity="center"
-                    android:onClick="broadcast"
-                    android:text="BroadCast"
-                    android:textSize="20sp" />
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/justshowBroadcastTextview"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:text="Broad Cast"
+                        android:textSize="20sp" />
+
+                    <LinearLayout
+                        android:id="@+id/innerlinearBroadcast"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#C6DEFC"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:id="@+id/BroadcasManifestTextview"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:text="Manifest"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/BroadcastActivityTextview"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:text="BroadCast Activity"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/BroadcastRecieverTextview"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:text="BroadCast Receiver"
+                            android:textSize="20sp" />
+                    </LinearLayout>
+                </LinearLayout>
 
                 <TextView
                     android:id="@+id/GooglemapTextview"
@@ -272,15 +310,67 @@
                     android:text="WebApp"
                     android:textSize="20sp" />
 
-                <TextView
-                    android:id="@+id/fcmTextview"
+                <LinearLayout
+                    android:id="@+id/pushnotificationLinearlayout"
                     android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:layout_gravity="center"
-                    android:gravity="center"
-                    android:onClick="fcm"
-                    android:text="FCM"
-                    android:textSize="20sp" />
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/justshopushnotificationTextview"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:text="Push Notification"
+                        android:textSize="20sp" />
+
+                    <LinearLayout
+                        android:id="@+id/innerlinearpushnotification"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#C6DEFC"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:id="@+id/firabseManifestTextview"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:text="Firebase Manifest"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/pushActivityTextview"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:text="Push Notification Activity"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/firebaseInstanceidTextview"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:text="FirebaseInstance ID Service"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/firebaseMessagingTextview"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:text="Firebase Messaging Service"
+                            android:textSize="20sp" />
+
+                    </LinearLayout>
+                </LinearLayout>
 
 
                 <TextView
@@ -498,27 +588,25 @@
                         android:orientation="vertical"
                         android:visibility="gone">
 
-                    <TextView
-                        android:id="@+id/loginTextview"
-                        android:layout_width="match_parent"
-                        android:layout_height="50dp"
-                        android:layout_gravity="center"
-                        android:gravity="center"
-                        android:text="Login Activity"
-                        android:textSize="20sp"
-                         />
+                        <TextView
+                            android:id="@+id/loginTextview"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:text="Login Activity"
+                            android:textSize="20sp" />
 
-                    <TextView
-                        android:id="@+id/sessionmanagerTextview"
-                        android:layout_width="match_parent"
-                        android:layout_height="50dp"
-                        android:layout_gravity="center"
-                        android:gravity="center"
-                        android:text="Login SessionManager"
-                        android:textSize="20sp"
-                         />
+                        <TextView
+                            android:id="@+id/sessionmanagerTextview"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:text="Login SessionManager"
+                            android:textSize="20sp" />
 
-                        </LinearLayout>
+                    </LinearLayout>
 
                 </LinearLayout>
 

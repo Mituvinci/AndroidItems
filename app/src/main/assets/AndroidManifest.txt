@@ -97,8 +97,6 @@
         </activity>
         <activity android:name=".GlidePicasso.GlidePicassoActivity" >
         </activity>
-        <activity android:name=".SqLiteDatabase.AddActivity" >
-        </activity>
     </application>
 
 </manifest>
