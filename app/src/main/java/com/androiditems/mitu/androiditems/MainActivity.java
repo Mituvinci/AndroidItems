@@ -10,7 +10,9 @@ import android.view.View;
 
 import com.androiditems.mitu.androiditems.Broadcast.BroadCastActivity;
 import com.androiditems.mitu.androiditems.Connectivity.NetworkConnectivityActivity;
+import com.androiditems.mitu.androiditems.Dialog.ShowDialogFragment;
 import com.androiditems.mitu.androiditems.FCM.FireBaseActivity;
+import com.androiditems.mitu.androiditems.GlidePicasso.GlidePicassoActivity;
 import com.androiditems.mitu.androiditems.GoogleMap.MapsActivity;
 import com.androiditems.mitu.androiditems.GsonVolly.GsonVollyActivity;
 import com.androiditems.mitu.androiditems.Login.LoginActivity;
@@ -32,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void codeShow(View view){
-        startActivity(new Intent(MainActivity.this,CodeActivity.class));
+        startActivity(new Intent(MainActivity.this, CodeActivity.class));
     }
     public void notification(View view){
         Intent intent = new Intent(MainActivity.this,MusicListActivity.class);
@@ -96,6 +98,7 @@ public class MainActivity extends AppCompatActivity {
     public void viewpager(View view){
         startActivity(new Intent(MainActivity.this, ViewPagerActivity.class));
     }
+
     public void sqliteDatabase(View view){
 
     }
@@ -114,9 +117,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    public void gcm(View view){
 
-    }
 
     public void endlessRecycleview(View view){
 
@@ -139,6 +140,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void glide(View view){
+        startActivity(new Intent(MainActivity.this, GlidePicassoActivity.class));
 
     }
     public void toggleButton(View view){
@@ -157,7 +159,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void dialog(View view){
-
+        getFragmentManager().beginTransaction().addToBackStack(null)
+                .replace(R.id.main, new ShowDialogFragment()).commit();
     }
 
     public void storeDatainaFile(View view){
