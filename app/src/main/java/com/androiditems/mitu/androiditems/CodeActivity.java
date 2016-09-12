@@ -10,6 +10,7 @@ import android.widget.TextView;
 public class CodeActivity extends AppCompatActivity {
     private static final String FILE = "file";
     private LinearLayout mLoginLinearLayout;
+    private LinearLayout mLoginInnerLinearLayout;
     private LinearLayout mLinearLayoutMusic;
     private LinearLayout mLinearLayoutInnerMusic;
     private TextView mJustShowermusicTextView;
@@ -38,6 +39,7 @@ public class CodeActivity extends AppCompatActivity {
         setContentView(R.layout.activity_code);
 
         mLoginLinearLayout = (LinearLayout) findViewById(R.id.loginlinearlayout);
+        mLoginInnerLinearLayout = (LinearLayout) findViewById(R.id.innerlinearLogin);
         mLoginActivityTextView = (TextView) findViewById(R.id.loginTextview);
         mLoginSessionManagerTextView = (TextView) findViewById(R.id.sessionmanagerTextview);
         mJustShowTextView = (TextView) findViewById(R.id.justshowtext);
@@ -178,9 +180,9 @@ public class CodeActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                mLoginSessionManagerTextView.setVisibility(View.VISIBLE);
-                mLoginActivityTextView.setVisibility(View.VISIBLE);
+                mLoginInnerLinearLayout.setVisibility(View.VISIBLE);
                 mJustShowTextView.setVisibility(View.GONE);
+
             }
         });
 
@@ -255,7 +257,9 @@ public class CodeActivity extends AppCompatActivity {
 
     }
     public void viewpager(View view){
-
+        Intent i = new Intent(getApplicationContext(),ShowCodeActivity.class);
+        i.putExtra(FILE,"ViewPagerActivity.txt");
+        startActivity(i);
     }
     public void sqliteDatabase(View view){
 
