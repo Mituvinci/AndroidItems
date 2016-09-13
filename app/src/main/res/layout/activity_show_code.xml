@@ -22,7 +22,6 @@
                 android:layout_height="50dp"
                 android:id="@+id/toolbarTitle"
                 android:layout_marginLeft="5dp"
-
                 android:textSize="18sp"
                 android:layout_centerVertical="true" />
 
@@ -38,6 +37,7 @@
         <TextView
             android:id="@+id/codeText"
             android:layout_width="match_parent"
+            android:background="#C6DEFC"
             android:layout_height="wrap_content"
             android:text="Yet No code added" />
     </ScrollView>

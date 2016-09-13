@@ -49,6 +49,12 @@ public class CodeActivity extends AppCompatActivity {
     private TextView mPushnotificationInstanceIdTextView;
     private TextView mPushnotificationMessagingTextView;
 
+    private LinearLayout mSqLiteMainLinearlayout;
+    private LinearLayout mSqLiteInnerLinearLayout;
+    private TextView mJustShowSqLiteTextView;
+    private TextView mSqLiteActivityMainTextView;
+    private TextView mSqLiteAddActivityTextView;
+    private TextView mSqLiteDatabaseHelperTextView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -96,11 +102,62 @@ public class CodeActivity extends AppCompatActivity {
         mPushnotificationInstanceIdTextView = (TextView) findViewById(R.id.firebaseInstanceidTextview);
         mPushnotificationMessagingTextView = (TextView) findViewById(R.id.firebaseMessagingTextview);
 
+        mSqLiteMainLinearlayout = (LinearLayout) findViewById(R.id.sqlitemainLinear);
+        mSqLiteInnerLinearLayout = (LinearLayout) findViewById(R.id.innerlinearSqlite);
+        mJustShowSqLiteTextView = (TextView) findViewById(R.id.justoShowTextview);
+        mSqLiteActivityMainTextView = (TextView) findViewById(R.id.DatabaseActivityTextview);
+        mSqLiteAddActivityTextView = (TextView) findViewById(R.id.DhbeHelperTextview);
+        mSqLiteDatabaseHelperTextView = (TextView) findViewById(R.id.AddActivityTextview);
+
+
+        sqLiteDatabase();
         pushNotification();
         broadcast();
         volly();
         login();
         music();
+    }
+
+    public void sqLiteDatabase(){
+
+        mSqLiteMainLinearlayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                mSqLiteInnerLinearLayout.setVisibility(View.VISIBLE);
+                mJustShowSqLiteTextView.setVisibility(View.GONE);
+            }
+        });
+
+        mSqLiteActivityMainTextView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getApplicationContext(),ShowCodeActivity.class);
+                i.putExtra(FILE, "DataBaseActivity.txt");
+                startActivity(i);
+            }
+        });
+
+        mSqLiteAddActivityTextView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getApplicationContext(),ShowCodeActivity.class);
+                i.putExtra(FILE, "AddActivity.txt");
+                startActivity(i);
+            }
+        });
+
+        mSqLiteDatabaseHelperTextView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getApplicationContext(), ShowCodeActivity.class);
+                i.putExtra(FILE, "DBHelper.txt");
+                startActivity(i);
+            }
+        });
+
+
+
     }
 
     public void pushNotification(){
@@ -413,7 +470,9 @@ public class CodeActivity extends AppCompatActivity {
     }
 
     public void glide(View view){
-
+        Intent i = new Intent(getApplicationContext(),ShowCodeActivity.class);
+        i.putExtra(FILE,"GlidePicassoActivity.txt");
+        startActivity(i);
     }
     public void toggleButton(View view){
 
