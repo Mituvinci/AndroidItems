@@ -5,7 +5,6 @@ import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
-import android.widget.Toast;
 
 import java.util.List;
 
@@ -154,8 +153,8 @@ public class AccelerometerManager {
                         lastX = x;
                         lastY = y;
                         lastZ = z;
-                        Toast.makeText(aContext,"No Motion detected",
-                                Toast.LENGTH_SHORT).show();
+                      /*  Toast.makeText(aContext,"No Motion detected",
+                                Toast.LENGTH_SHORT).show();*/
 
                     } else {
                         timeDiff = now - lastUpdate;
@@ -177,8 +176,8 @@ public class AccelerometerManager {
                                 }
                                 else
                                 {
-                                    Toast.makeText(aContext, "No Motion detected",
-                                            Toast.LENGTH_SHORT).show();
+                                    /*Toast.makeText(aContext, "No Motion detected",
+                                            Toast.LENGTH_SHORT).show();*/
 
                                 }
                                 lastShake = now;
@@ -190,7 +189,9 @@ public class AccelerometerManager {
                         }
                         else
                         {
+/*
                             Toast.makeText(aContext,"No Motion detected", Toast.LENGTH_SHORT).show();
+*/
 
                         }
                     }
