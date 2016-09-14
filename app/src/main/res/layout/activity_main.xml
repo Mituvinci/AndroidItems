@@ -44,46 +44,23 @@
                 android:layout_marginBottom="40dp"
                 android:orientation="vertical">
 
-
                 <TextView
-                    android:id="@+id/notificationButton"
+                    android:id="@+id/animationTextview"
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
-                    android:layout_below="@+id/text"
                     android:layout_gravity="center"
                     android:gravity="center"
-                    android:onClick="notification"
-                    android:text="Notification"
+                    android:onClick="animation"
+                    android:text="Animation"
                     android:textSize="20sp" />
-
                 <TextView
-                    android:id="@+id/searchButton"
+                    android:id="@+id/BroadcastTextview"
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
                     android:layout_gravity="center"
                     android:gravity="center"
-                    android:onClick="Search"
-                    android:text="Serach"
-                    android:textSize="20sp" />
-
-                <TextView
-                    android:id="@+id/medialPlayerButton"
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:layout_gravity="center"
-                    android:gravity="center"
-                    android:onClick="MediaPlayer"
-                    android:text="Music"
-                    android:textSize="20sp" />
-
-                <TextView
-                    android:id="@+id/splashButton"
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:layout_gravity="center"
-                    android:gravity="center"
-                    android:onClick="splash"
-                    android:text="Splash"
+                    android:onClick="broadcast"
+                    android:text="BroadCast"
                     android:textSize="20sp" />
 
                 <TextView
@@ -107,24 +84,54 @@
                     android:textSize="20sp" />
 
                 <TextView
-                    android:id="@+id/serviceTextview"
+                    android:id="@+id/contentProvidersTextview"
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
                     android:layout_gravity="center"
                     android:gravity="center"
-                    android:onClick="service"
-                    android:text="Service"
+                    android:onClick="contentProvider"
+                    android:text="ContentProvider"
                     android:textSize="20sp" />
 
                 <TextView
-                    android:id="@+id/BroadcastTextview"
+                    android:id="@+id/callTextview"
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
                     android:layout_gravity="center"
                     android:gravity="center"
-                    android:onClick="broadcast"
-                    android:text="BroadCast"
+                    android:onClick="call"
+                    android:text="Call"
                     android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/EndlessTextview"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:onClick="endlessRecycleview"
+                    android:text="EndlessRecycleView"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/fcmTextview"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:onClick="fcm"
+                    android:text="FCM"
+                    android:textSize="20sp" />
+                <TextView
+                    android:id="@+id/facebooklofinTextview"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:onClick="facebookLogin"
+                    android:text="FaceBook Login"
+                    android:textSize="20sp" />
+
 
                 <TextView
                     android:id="@+id/GooglemapTextview"
@@ -135,6 +142,147 @@
                     android:onClick="googleMap"
                     android:text="GoogleMap"
                     android:textSize="20sp" />
+                <TextView
+                    android:id="@+id/vollyTextview"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:onClick="volly"
+                    android:text="Gson Volly"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/glideTextview"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:onClick="glide"
+                    android:text="Glide"
+                    android:textSize="20sp" />
+
+
+
+                <TextView
+                    android:id="@+id/googleloginTextview"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:onClick="googleLogin"
+                    android:text="Google Login"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/jsonTextview"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:onClick="json"
+                    android:text="JSon"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/loginTextview"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:onClick="login"
+                    android:text="Login Session Manager"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/medialPlayerButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:onClick="MediaPlayer"
+                    android:text="Music"
+                    android:textSize="20sp" />
+                <TextView
+                    android:id="@+id/navigationTextview"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:onClick="navigation"
+                    android:text="Navigation"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/notificationButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_below="@+id/text"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:onClick="notification"
+                    android:text="Notification"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/retrofitTextview"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:onClick="retrofit"
+                    android:text="Retrofit"
+                    android:textSize="20sp" />
+
+
+
+
+
+                <TextView
+                    android:id="@+id/toggleButtonTextview"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:onClick="toggleButton"
+                    android:text="Toggle Button"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/searchButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:onClick="Search"
+                    android:text="Serach"
+                    android:textSize="20sp" />
+
+
+                <TextView
+                    android:id="@+id/splashButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:onClick="splash"
+                    android:text="Splash"
+                    android:textSize="20sp" />
+
+
+
+                <TextView
+                    android:id="@+id/serviceTextview"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:onClick="service"
+                    android:text="Service"
+                    android:textSize="20sp" />
+
+
+
 
                 <TextView
                     android:id="@+id/sensorTextview"
@@ -156,35 +304,6 @@
                     android:text="Security"
                     android:textSize="20sp" />
 
-                <TextView
-                    android:id="@+id/animationTextview"
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:layout_gravity="center"
-                    android:gravity="center"
-                    android:onClick="animation"
-                    android:text="Animation"
-                    android:textSize="20sp" />
-
-                <TextView
-                    android:id="@+id/navigationTextview"
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:layout_gravity="center"
-                    android:gravity="center"
-                    android:onClick="navigation"
-                    android:text="Navigation"
-                    android:textSize="20sp" />
-
-                <TextView
-                    android:id="@+id/ViewpagerTextview"
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:layout_gravity="center"
-                    android:gravity="center"
-                    android:onClick="viewpager"
-                    android:text="ViewPager"
-                    android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/SqliteTextview"
@@ -194,127 +313,6 @@
                     android:gravity="center"
                     android:onClick="sqliteDatabase"
                     android:text="SQLiteDatabase"
-                    android:textSize="20sp" />
-
-                <TextView
-                    android:id="@+id/contentProvidersTextview"
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:layout_gravity="center"
-                    android:gravity="center"
-                    android:onClick="contentProvider"
-                    android:text="ContentProvider"
-                    android:textSize="20sp" />
-
-                <TextView
-                    android:id="@+id/webappTextview"
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:layout_gravity="center"
-                    android:gravity="center"
-                    android:onClick="webApp"
-                    android:text="WebApp"
-                    android:textSize="20sp" />
-
-                <TextView
-                    android:id="@+id/fcmTextview"
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:layout_gravity="center"
-                    android:gravity="center"
-                    android:onClick="fcm"
-                    android:text="FCM"
-                    android:textSize="20sp" />
-
-
-                <TextView
-                    android:id="@+id/EndlessTextview"
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:layout_gravity="center"
-                    android:gravity="center"
-                    android:onClick="endlessRecycleview"
-                    android:text="EndlessRecycleView"
-                    android:textSize="20sp" />
-
-                <TextView
-                    android:id="@+id/voicesearchTextview"
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:layout_gravity="center"
-                    android:gravity="center"
-                    android:onClick="voiceSearch"
-                    android:text="Voice Search"
-                    android:textSize="20sp" />
-
-                <TextView
-                    android:id="@+id/retrofitTextview"
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:layout_gravity="center"
-                    android:gravity="center"
-                    android:onClick="retrofit"
-                    android:text="Retrofit"
-                    android:textSize="20sp" />
-
-                <TextView
-                    android:id="@+id/vollyTextview"
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:layout_gravity="center"
-                    android:gravity="center"
-                    android:onClick="volly"
-                    android:text="Gson Volly"
-                    android:textSize="20sp" />
-
-                <TextView
-                    android:id="@+id/jsonTextview"
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:layout_gravity="center"
-                    android:gravity="center"
-                    android:onClick="json"
-                    android:text="JSon"
-                    android:textSize="20sp" />
-
-                <TextView
-                    android:id="@+id/glideTextview"
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:layout_gravity="center"
-                    android:gravity="center"
-                    android:onClick="glide"
-                    android:text="Glide"
-                    android:textSize="20sp" />
-
-                <TextView
-                    android:id="@+id/toggleButtonTextview"
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:layout_gravity="center"
-                    android:gravity="center"
-                    android:onClick="toggleButton"
-                    android:text="Toggle Button"
-                    android:textSize="20sp" />
-
-                <TextView
-                    android:id="@+id/facebooklofinTextview"
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:layout_gravity="center"
-                    android:gravity="center"
-                    android:onClick="facebookLogin"
-                    android:text="FaceBook Login"
-                    android:textSize="20sp" />
-
-                <TextView
-                    android:id="@+id/googleloginTextview"
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:layout_gravity="center"
-                    android:gravity="center"
-                    android:onClick="googleLogin"
-                    android:text="Google Login"
                     android:textSize="20sp" />
 
 
@@ -348,25 +346,37 @@
                     android:text="Store Data in File"
                     android:textSize="20sp" />
 
+
                 <TextView
-                    android:id="@+id/callTextview"
+                    android:id="@+id/voicesearchTextview"
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
                     android:layout_gravity="center"
                     android:gravity="center"
-                    android:onClick="call"
-                    android:text="Call"
+                    android:onClick="voiceSearch"
+                    android:text="Voice Search"
+                    android:textSize="20sp" />
+                <TextView
+                    android:id="@+id/ViewpagerTextview"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:onClick="viewpager"
+                    android:text="ViewPager"
                     android:textSize="20sp" />
 
                 <TextView
-                    android:id="@+id/loginTextview"
+                    android:id="@+id/webappTextview"
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
                     android:layout_gravity="center"
                     android:gravity="center"
-                    android:onClick="login"
-                    android:text="Login Session Manager"
+                    android:onClick="webApp"
+                    android:text="WebApp"
                     android:textSize="20sp" />
+
+
 
             </LinearLayout>
         </ScrollView>

@@ -168,6 +168,14 @@ public class MainActivity extends AppCompatActivity {
     public void storeDatainaFile(View view){
 
     }
+    public void call(View view){
+       // String phoneNumber = "09612007007";
+        Intent dial = new Intent();
+        dial.setAction("android.intent.action.DIAL");
+       // dial.setData(Uri.parse("tel:" + phoneNumber));
+        startActivity(dial);
+
+    }
     public void login(View view){
         startActivity(new Intent(MainActivity.this, LoginActivity.class));
 
