@@ -19,6 +19,7 @@ import com.androiditems.mitu.androiditems.Login.LoginActivity;
 import com.androiditems.mitu.androiditems.MusicPlayer.MusicListActivity;
 import com.androiditems.mitu.androiditems.Navigation.NavigationDrawerActivity;
 import com.androiditems.mitu.androiditems.Searchable.SearchActivity;
+import com.androiditems.mitu.androiditems.Sensor.SensorActivity;
 import com.androiditems.mitu.androiditems.SharedPreferance.SharedpreferanceActivity;
 import com.androiditems.mitu.androiditems.Splash.SplashActivity;
 import com.androiditems.mitu.androiditems.SqLiteDatabase.DataBaseActivity;
@@ -88,6 +89,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
     public void sensor(View view){
+        startActivity(new Intent(MainActivity.this,SensorActivity.class));
 
     }
     public void security(View view){

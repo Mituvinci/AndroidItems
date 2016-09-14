@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.androiditems.mitu.androiditems" >
-
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"></uses-permission>
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <uses-permission android:name="android.permission.CALL_PHONE"
-        android:required="false"/>
+    <uses-permission
+        android:name="android.permission.CALL_PHONE"
+        android:required="false" />
     <!--
          The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
          Google Maps Android API v2, but you must specify either coarse or fine
@@ -99,6 +100,8 @@
         <activity android:name=".GlidePicasso.GlidePicassoActivity" >
         </activity>
         <activity android:name=".SqLiteDatabase.AddActivity" >
+        </activity>
+        <activity android:name=".Sensor.SensorActivity" >
         </activity>
     </application>
 
