@@ -36,7 +36,8 @@ public class ShowCodeActivity extends AppCompatActivity {
         Bundle bundle = intent.getExtras();
         String file = bundle.getString(FILE, "");
         Log.d("file name : ", file);
-        TitleTextView.setText(file);
+        String FileName =  file.replace(".txt","");
+        TitleTextView.setText(FileName);
         try {
             mString =  readFromAssets(getApplicationContext(),file);
             mTextView.setText(mString);
