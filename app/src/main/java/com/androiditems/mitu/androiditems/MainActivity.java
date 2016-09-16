@@ -20,6 +20,7 @@ import com.androiditems.mitu.androiditems.MusicPlayer.MusicListActivity;
 import com.androiditems.mitu.androiditems.Navigation.NavigationDrawerActivity;
 import com.androiditems.mitu.androiditems.Searchable.SearchActivity;
 import com.androiditems.mitu.androiditems.Sensor.SensorActivity;
+import com.androiditems.mitu.androiditems.Service.StartServiceActivity;
 import com.androiditems.mitu.androiditems.SharedPreferance.SharedpreferanceActivity;
 import com.androiditems.mitu.androiditems.Splash.SplashActivity;
 import com.androiditems.mitu.androiditems.SqLiteDatabase.DataBaseActivity;
@@ -78,6 +79,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
     public void service(View view){
+        startActivity(new Intent(MainActivity.this,StartServiceActivity.class));
 
     }
     public void broadcast(View view){

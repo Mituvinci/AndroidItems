@@ -4,8 +4,8 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:background="#FFFFFF"
+    android:orientation="vertical"
     tools:context=".MainActivity">
 
     <LinearLayout
@@ -21,8 +21,8 @@
             android:layout_gravity="center"
             android:background="#FFFFFF"
             android:gravity="center"
-            android:textColor="#F6BF65"
             android:text="Raw Code"
+            android:textColor="#F6BF65"
             android:textSize="25sp" />
     </LinearLayout>
 
@@ -35,8 +35,8 @@
         <ScrollView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:scrollbars="none"
-            android:layout_margin="5dp">
+            android:layout_margin="5dp"
+            android:scrollbars="none">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -52,6 +52,7 @@
                     android:onClick="animation"
                     android:text="Animation"
                     android:textSize="20sp" />
+
                 <LinearLayout
                     android:id="@+id/BroadcastLinearLayout"
                     android:layout_width="match_parent"
@@ -113,6 +114,7 @@
                     android:onClick="camera"
                     android:text="Camera"
                     android:textSize="20sp" />
+
                 <TextView
                     android:id="@+id/connectivityTextview"
                     android:layout_width="match_parent"
@@ -273,6 +275,7 @@
                     android:onClick="json"
                     android:text="JSon"
                     android:textSize="20sp" />
+
                 <LinearLayout
                     android:id="@+id/musicLinearlayout"
                     android:layout_width="match_parent"
@@ -391,6 +394,7 @@
                     android:gravity="center"
                     android:text="Navigation"
                     android:textSize="20sp" />
+
                 <TextView
                     android:id="@+id/notificationButton"
                     android:layout_width="match_parent"
@@ -486,7 +490,6 @@
                     android:textSize="20sp" />
 
 
-
                 <TextView
                     android:id="@+id/splashButton"
                     android:layout_width="match_parent"
@@ -498,21 +501,69 @@
                     android:textSize="20sp" />
 
 
-
-
-
-                <TextView
-                    android:id="@+id/serviceTextview"
+                <LinearLayout
+                    android:id="@+id/ServiceMainLinearlayout"
                     android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:layout_gravity="center"
-                    android:gravity="center"
-                    android:onClick="service"
-                    android:text="Service"
-                    android:textSize="20sp" />
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/justtshowServiceTextview"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:text="Service"
+                        android:textSize="20sp" />
+
+                    <LinearLayout
+                        android:id="@+id/innerlinearServiceTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#C6DEFC"
+                        android:orientation="vertical"
+                        android:visibility="gone">
 
 
+                        <TextView
+                            android:id="@+id/startServiceActivityTextview"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:onClick="service"
+                            android:text="Start Service Activity"
+                            android:textSize="20sp" />
+                        <TextView
+                            android:id="@+id/startserviceTextview"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:onClick="service"
+                            android:text="Start Service"
+                            android:textSize="20sp" />
+                        <TextView
+                            android:id="@+id/boundserviceactivityTextview"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:onClick="service"
+                            android:text="Bound Service Activity"
+                            android:textSize="20sp" />
+                        <TextView
+                            android:id="@+id/boundserviceTextview"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:onClick="service"
+                            android:text="Bound Service"
+                            android:textSize="20sp" />
 
+                    </LinearLayout>
+                </LinearLayout>
 
 
                 <TextView
@@ -590,7 +641,6 @@
                 </LinearLayout>
 
 
-
                 <TextView
                     android:id="@+id/sharedpreferanceTextview"
                     android:layout_width="match_parent"
@@ -641,6 +691,7 @@
                     android:onClick="viewpager"
                     android:text="ViewPager"
                     android:textSize="20sp" />
+
                 <TextView
                     android:id="@+id/voicesearchTextview"
                     android:layout_width="match_parent"
@@ -650,6 +701,7 @@
                     android:onClick="voiceSearch"
                     android:text="Voice Search"
                     android:textSize="20sp" />
+
                 <TextView
                     android:id="@+id/webappTextview"
                     android:layout_width="match_parent"

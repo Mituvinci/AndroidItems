@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.androiditems.mitu.androiditems" >
-    <uses-permission android:name="android.permission.READ_PHONE_STATE"></uses-permission>
+
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
@@ -89,6 +90,9 @@
             android:name="com.google.android.maps.v2.API_KEY"
             android:value="@string/google_maps_key" />
 
+        <service android:name=".Service.StartService" />
+        <service android:name=".Service.BoundService"/>
+
         <activity android:name=".GsonVolly.GsonVollyActivity" >
         </activity>
         <activity android:name=".FCM.FireBaseActivity" >
@@ -102,6 +106,10 @@
         <activity android:name=".SqLiteDatabase.AddActivity" >
         </activity>
         <activity android:name=".Sensor.SensorActivity" >
+        </activity>
+        <activity android:name=".Service.StartServiceActivity" >
+        </activity>
+        <activity android:name=".Service.BoundServiceActivity" >
         </activity>
     </application>
 

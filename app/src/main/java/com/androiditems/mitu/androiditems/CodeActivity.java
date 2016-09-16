@@ -56,6 +56,15 @@ public class CodeActivity extends AppCompatActivity {
     private TextView mSqLiteAddActivityTextView;
     private TextView mSqLiteDatabaseHelperTextView;
 
+
+    private LinearLayout mServiceMainLinearlayout;
+    private LinearLayout mServiceInnerLinearLayout;
+    private TextView mJustServiceTextView;
+    private TextView mStartServiceActivityMainTextView;
+    private TextView mStartServiceTextView;
+    private TextView mBoundServiceActivityTextView;
+    private TextView mBoundServiceTextView;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -110,6 +119,16 @@ public class CodeActivity extends AppCompatActivity {
         mSqLiteDatabaseHelperTextView = (TextView) findViewById(R.id.AddActivityTextview);
 
 
+
+        mServiceMainLinearlayout = (LinearLayout) findViewById(R.id.ServiceMainLinearlayout);
+        mServiceInnerLinearLayout = (LinearLayout) findViewById(R.id.innerlinearServiceTextView);
+        mJustServiceTextView = (TextView) findViewById(R.id.justtshowServiceTextview);
+        mStartServiceActivityMainTextView = (TextView) findViewById(R.id.startServiceActivityTextview);
+        mStartServiceTextView = (TextView) findViewById(R.id.startserviceTextview);
+        mBoundServiceActivityTextView = (TextView) findViewById(R.id.boundserviceactivityTextview);
+        mBoundServiceTextView = (TextView) findViewById(R.id.boundserviceTextview);
+
+        service();
         sqLiteDatabase();
         pushNotification();
         broadcast();
@@ -117,7 +136,56 @@ public class CodeActivity extends AppCompatActivity {
         login();
         music();
     }
+    public void service(){
 
+        mServiceMainLinearlayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                mServiceInnerLinearLayout.setVisibility(View.VISIBLE);
+                mJustServiceTextView.setVisibility(View.GONE);
+            }
+        });
+
+        mStartServiceActivityMainTextView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getApplicationContext(),ShowCodeActivity.class);
+                i.putExtra(FILE, "StartServiceActivity.txt");
+                startActivity(i);
+            }
+        });
+
+        mStartServiceTextView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getApplicationContext(),ShowCodeActivity.class);
+                i.putExtra(FILE, "StartService.txt");
+                startActivity(i);
+            }
+        });
+
+        mBoundServiceActivityTextView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getApplicationContext(), ShowCodeActivity.class);
+                i.putExtra(FILE, "BoundServiceActivity.txt");
+                startActivity(i);
+            }
+        });
+
+        mBoundServiceTextView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getApplicationContext(), ShowCodeActivity.class);
+                i.putExtra(FILE, "BoundService.txt");
+                startActivity(i);
+            }
+        });
+
+
+
+    }
     public void sqLiteDatabase(){
 
         mSqLiteMainLinearlayout.setOnClickListener(new View.OnClickListener() {
