@@ -43,7 +43,7 @@
                 android:resource="@xml/searchable" />
         </activity>
         <activity android:name=".Splash.SplashActivity"></activity>
-        <activity android:name=".Camera.CamerActivity"></activity>
+        <activity android:name=".Camera.CameraActivity"></activity>
         <activity
             android:name=".Navigation.NavigationDrawerActivity"
             android:label="@string/title_activity_navigation_drawer"

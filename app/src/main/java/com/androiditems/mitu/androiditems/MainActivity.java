@@ -9,6 +9,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
 import com.androiditems.mitu.androiditems.Broadcast.BroadCastActivity;
+import com.androiditems.mitu.androiditems.Camera.CameraActivity;
 import com.androiditems.mitu.androiditems.Connectivity.NetworkConnectivityActivity;
 import com.androiditems.mitu.androiditems.ContentProvider.ContentProviderActivity;
 import com.androiditems.mitu.androiditems.Dialog.ShowDialogFragment;
@@ -68,6 +69,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void camera(View view){
+        startActivity(new Intent(MainActivity.this, CameraActivity.class));
 
     }
 
