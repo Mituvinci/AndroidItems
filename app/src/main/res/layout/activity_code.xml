@@ -534,6 +534,7 @@
                             android:onClick="service"
                             android:text="Start Service Activity"
                             android:textSize="20sp" />
+
                         <TextView
                             android:id="@+id/startserviceTextview"
                             android:layout_width="match_parent"
@@ -543,6 +544,7 @@
                             android:onClick="service"
                             android:text="Start Service"
                             android:textSize="20sp" />
+
                         <TextView
                             android:id="@+id/boundserviceactivityTextview"
                             android:layout_width="match_parent"
@@ -552,6 +554,7 @@
                             android:onClick="service"
                             android:text="Bound Service Activity"
                             android:textSize="20sp" />
+
                         <TextView
                             android:id="@+id/boundserviceTextview"
                             android:layout_width="match_parent"
@@ -565,16 +568,60 @@
                     </LinearLayout>
                 </LinearLayout>
 
-
-                <TextView
-                    android:id="@+id/sensorTextview"
+                <LinearLayout
+                    android:id="@+id/SensorMainLinearlayout"
                     android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:layout_gravity="center"
-                    android:gravity="center"
-                    android:onClick="sensor"
-                    android:text="Sensor"
-                    android:textSize="20sp" />
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/justtsensorTextview"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:text="Sensor"
+                        android:textSize="20sp" />
+
+                    <LinearLayout
+                        android:id="@+id/innerlinearsensorTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#C6DEFC"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <TextView
+
+                            android:id="@+id/sensoractivityTextview"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:text="Sensor Activity"
+                            android:textSize="20sp" />
+                        <TextView
+
+                            android:id="@+id/accelerometerListenerTextview"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:text="AccelerometerListener"
+                            android:textSize="20sp" />
+                        <TextView
+
+                            android:id="@+id/accelerometermanagerTextview"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:text="AccelerometerManager"
+                            android:textSize="20sp" />
+
+
+                    </LinearLayout>
+                </LinearLayout>
 
                 <TextView
                     android:id="@+id/SecuritTextview"

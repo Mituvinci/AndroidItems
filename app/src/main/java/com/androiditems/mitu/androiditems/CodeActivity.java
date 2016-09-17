@@ -65,6 +65,12 @@ public class CodeActivity extends AppCompatActivity {
     private TextView mBoundServiceActivityTextView;
     private TextView mBoundServiceTextView;
 
+    private LinearLayout mSensorMainLinearlayout;
+    private LinearLayout mSensorInnerLinearLayout;
+    private TextView mJustSensorTextView;
+    private TextView mSensorActivityMainTextView;
+    private TextView mAccelerometerListenerTextView;
+    private TextView mAccelerometerManagerTextView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -128,6 +134,17 @@ public class CodeActivity extends AppCompatActivity {
         mBoundServiceActivityTextView = (TextView) findViewById(R.id.boundserviceactivityTextview);
         mBoundServiceTextView = (TextView) findViewById(R.id.boundserviceTextview);
 
+
+
+
+        mSensorMainLinearlayout = (LinearLayout) findViewById(R.id.SensorMainLinearlayout);
+        mSensorInnerLinearLayout = (LinearLayout) findViewById(R.id.innerlinearsensorTextView);
+        mJustSensorTextView = (TextView) findViewById(R.id.justtsensorTextview);
+        mSensorActivityMainTextView = (TextView) findViewById(R.id.sensoractivityTextview);
+        mAccelerometerListenerTextView = (TextView) findViewById(R.id.accelerometerListenerTextview);
+        mAccelerometerManagerTextView = (TextView) findViewById(R.id.accelerometermanagerTextview);
+
+        sensor();
         service();
         sqLiteDatabase();
         pushNotification();
@@ -135,6 +152,50 @@ public class CodeActivity extends AppCompatActivity {
         volly();
         login();
         music();
+    }
+
+    public void sensor(){
+
+        mSensorMainLinearlayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                mSensorInnerLinearLayout.setVisibility(View.VISIBLE);
+                mJustSensorTextView.setVisibility(View.GONE);
+            }
+        });
+
+        mSensorActivityMainTextView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getApplicationContext(),ShowCodeActivity.class);
+                i.putExtra(FILE, "SensorActivity.txt");
+                startActivity(i);
+            }
+        });
+
+        mAccelerometerListenerTextView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getApplicationContext(),ShowCodeActivity.class);
+                i.putExtra(FILE, "AccelerometerListener.txt");
+                startActivity(i);
+            }
+        });
+
+        mAccelerometerManagerTextView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getApplicationContext(), ShowCodeActivity.class);
+                i.putExtra(FILE, "AccelerometerManager.txt");
+                startActivity(i);
+            }
+        });
+
+
+
+
+
     }
     public void service(){
 
@@ -488,9 +549,7 @@ public class CodeActivity extends AppCompatActivity {
     public void googleMap(View view){
 
     }
-    public void sensor(View view){
 
-    }
     public void security(View view){
 
     }
