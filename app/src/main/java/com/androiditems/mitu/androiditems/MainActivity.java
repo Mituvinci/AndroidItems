@@ -10,6 +10,7 @@ import android.view.View;
 
 import com.androiditems.mitu.androiditems.Broadcast.BroadCastActivity;
 import com.androiditems.mitu.androiditems.Connectivity.NetworkConnectivityActivity;
+import com.androiditems.mitu.androiditems.ContentProvider.ContentProviderActivity;
 import com.androiditems.mitu.androiditems.Dialog.ShowDialogFragment;
 import com.androiditems.mitu.androiditems.FCM.FireBaseActivity;
 import com.androiditems.mitu.androiditems.GlidePicasso.GlidePicassoActivity;
@@ -110,6 +111,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void contentProvider(View view){
+        startActivity(new Intent(MainActivity.this, ContentProviderActivity.class));
 
     }
 
