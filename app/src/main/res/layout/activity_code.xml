@@ -125,15 +125,56 @@
                     android:text="Connectivity"
                     android:textSize="20sp" />
 
-                <TextView
-                    android:id="@+id/contentProvidersTextview"
+                <LinearLayout
+                    android:id="@+id/contentprovideLinearLayout"
                     android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:layout_gravity="center"
-                    android:gravity="center"
-                    android:onClick="contentProvider"
-                    android:text="ContentProvider"
-                    android:textSize="20sp" />
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/justshowcontentproviderTextview"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:text="Content Provider"
+                        android:textSize="20sp" />
+
+                    <LinearLayout
+                        android:id="@+id/innerlinearcontentproviderTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#C6DEFC"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:id="@+id/contentProvidersmanifestTextview"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:text="ContentProvider Manifest"
+                            android:textSize="20sp" />
+                        <TextView
+                            android:id="@+id/contentProvidersactivityTextview"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:text="ContentProvider Activity"
+                            android:textSize="20sp" />
+                        <TextView
+                            android:id="@+id/contentProvidersTextview"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:text="My ContentProvider "
+                            android:textSize="20sp" />
+                    </LinearLayout>
+                </LinearLayout>
+
 
                 <TextView
                     android:id="@+id/callTextview"
@@ -567,6 +608,7 @@
 
                     </LinearLayout>
                 </LinearLayout>
+
 
                 <LinearLayout
                     android:id="@+id/SensorMainLinearlayout"

@@ -71,6 +71,13 @@ public class CodeActivity extends AppCompatActivity {
     private TextView mSensorActivityMainTextView;
     private TextView mAccelerometerListenerTextView;
     private TextView mAccelerometerManagerTextView;
+
+    private LinearLayout mContentProviderMainLinearlayout;
+    private LinearLayout mContentProviderInnerLinearLayout;
+    private TextView mJustContentproviderTextView;
+    private TextView mContentProviderActivityMainTextView;
+    private TextView mContentProviderManifestTextView;
+    private TextView mContentProviderTextView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -135,8 +142,6 @@ public class CodeActivity extends AppCompatActivity {
         mBoundServiceTextView = (TextView) findViewById(R.id.boundserviceTextview);
 
 
-
-
         mSensorMainLinearlayout = (LinearLayout) findViewById(R.id.SensorMainLinearlayout);
         mSensorInnerLinearLayout = (LinearLayout) findViewById(R.id.innerlinearsensorTextView);
         mJustSensorTextView = (TextView) findViewById(R.id.justtsensorTextview);
@@ -144,6 +149,15 @@ public class CodeActivity extends AppCompatActivity {
         mAccelerometerListenerTextView = (TextView) findViewById(R.id.accelerometerListenerTextview);
         mAccelerometerManagerTextView = (TextView) findViewById(R.id.accelerometermanagerTextview);
 
+
+        mContentProviderMainLinearlayout = (LinearLayout) findViewById(R.id.contentprovideLinearLayout);
+        mContentProviderInnerLinearLayout = (LinearLayout) findViewById(R.id.innerlinearcontentproviderTextView);
+        mJustContentproviderTextView = (TextView) findViewById(R.id.justshowcontentproviderTextview);
+        mContentProviderActivityMainTextView = (TextView) findViewById(R.id.contentProvidersactivityTextview);
+        mContentProviderManifestTextView = (TextView) findViewById(R.id.contentProvidersmanifestTextview);
+        mContentProviderTextView = (TextView) findViewById(R.id.contentProvidersTextview);
+
+        contentProvider();
         sensor();
         service();
         sqLiteDatabase();
@@ -152,6 +166,50 @@ public class CodeActivity extends AppCompatActivity {
         volly();
         login();
         music();
+    }
+
+    public void contentProvider(){
+
+        mContentProviderMainLinearlayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                mContentProviderInnerLinearLayout.setVisibility(View.VISIBLE);
+                mJustContentproviderTextView.setVisibility(View.GONE);
+            }
+        });
+
+        mContentProviderActivityMainTextView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getApplicationContext(),ShowCodeActivity.class);
+                i.putExtra(FILE, "ContentProviderActivity.txt");
+                startActivity(i);
+            }
+        });
+
+        mContentProviderManifestTextView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getApplicationContext(),ShowCodeActivity.class);
+                i.putExtra(FILE, "ContentProviderAndroidManifest.txt");
+                startActivity(i);
+            }
+        });
+
+        mContentProviderTextView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getApplicationContext(), ShowCodeActivity.class);
+                i.putExtra(FILE, "MyProvider.txt");
+                startActivity(i);
+            }
+        });
+
+
+
+
+
     }
 
     public void sensor(){
