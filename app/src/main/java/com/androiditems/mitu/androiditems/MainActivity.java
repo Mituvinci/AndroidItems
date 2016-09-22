@@ -17,6 +17,8 @@ import com.androiditems.mitu.androiditems.FCM.FireBaseActivity;
 import com.androiditems.mitu.androiditems.GlidePicasso.GlidePicassoActivity;
 import com.androiditems.mitu.androiditems.GoogleMap.MapsActivity;
 import com.androiditems.mitu.androiditems.GsonVolly.GsonVollyActivity;
+import com.androiditems.mitu.androiditems.Handler.HandlerActivity;
+import com.androiditems.mitu.androiditems.HttpUrl.HttpurlConnectionActivity;
 import com.androiditems.mitu.androiditems.Login.LoginActivity;
 import com.androiditems.mitu.androiditems.MusicPlayer.MusicListActivity;
 import com.androiditems.mitu.androiditems.Navigation.NavigationDrawerActivity;
@@ -146,6 +148,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void json(View view){
+        startActivity(new Intent(MainActivity.this, HttpurlConnectionActivity.class));
 
     }
 
@@ -186,6 +189,11 @@ public class MainActivity extends AppCompatActivity {
     }
     public void login(View view){
         startActivity(new Intent(MainActivity.this, LoginActivity.class));
+
+    }
+    public void handler(View view){
+        startActivity(new Intent(MainActivity.this, HandlerActivity.class));
+
 
     }
 

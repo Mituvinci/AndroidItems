@@ -376,6 +376,16 @@
                     android:text="WebApp"
                     android:textSize="20sp" />
 
+                <TextView
+                    android:id="@+id/HandlerTextview"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:onClick="handler"
+                    android:text="Handler"
+                    android:textSize="20sp" />
+
 
 
             </LinearLayout>

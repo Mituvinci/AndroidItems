@@ -31,8 +31,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MusicPlayer.MusicListActivity"></activity>
-        <activity android:name=".MusicPlayer.MusicPlayer"></activity>
+        <activity android:name=".MusicPlayer.MusicListActivity" />
+        <activity android:name=".MusicPlayer.MusicPlayer" />
         <activity android:name=".Searchable.SearchActivity">
             <intent-filter>
                 <action android:name="android.intent.action.SEARCH" />
@@ -42,26 +42,26 @@
                 android:name="android.app.searchable"
                 android:resource="@xml/searchable" />
         </activity>
-        <activity android:name=".Splash.SplashActivity"></activity>
-        <activity android:name=".Camera.CameraActivity"></activity>
+        <activity android:name=".Splash.SplashActivity" />
+        <activity android:name=".Camera.CameraActivity" />
         <activity
             android:name=".Navigation.NavigationDrawerActivity"
             android:label="@string/title_activity_navigation_drawer"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
-        <activity android:name=".SharedPreferance.SharedpreferanceActivity"></activity>
-        <activity android:name=".Connectivity.NetworkConnectivityActivity"></activity>
-        <activity android:name=".Login.LoginActivity"></activity>
-        <activity android:name=".CodeActivity"></activity>
-        <activity android:name=".ShowCodeActivity"></activity>
-        <activity android:name=".ViewPager.ViewPagerActivity"></activity>
-        <activity android:name=".Broadcast.BroadCastActivity"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".SharedPreferance.SharedpreferanceActivity" />
+        <activity android:name=".Connectivity.NetworkConnectivityActivity" />
+        <activity android:name=".Login.LoginActivity" />
+        <activity android:name=".CodeActivity" />
+        <activity android:name=".ShowCodeActivity" />
+        <activity android:name=".ViewPager.ViewPagerActivity" />
+        <activity android:name=".Broadcast.BroadCastActivity" />
         <activity
             android:name=".GoogleMap.MapsActivity"
-            android:label="title_activity_google_maps"></activity>
+            android:label="title_activity_google_maps" />
 
         <receiver android:name=".Broadcast.BroadCastReceiver">
             <intent-filter>
-                <action android:name="com.tutorialspoint.CUSTOM_INTENT"></action>
+                <action android:name="com.tutorialspoint.CUSTOM_INTENT" />
             </intent-filter>
         </receiver>
         <!--
@@ -79,23 +79,25 @@
         <service android:name=".Service.StartService" />
         <service android:name=".Service.BoundService" />
 
-        <activity android:name=".GsonVolly.GsonVollyActivity"></activity>
-        <activity android:name=".FCM.FireBaseActivity"></activity>
-        <activity android:name=".PushNotification.PushNotificationActivity"></activity>
-        <activity android:name=".SqLiteDatabase.DataBaseActivity"></activity>
-        <activity android:name=".GlidePicasso.GlidePicassoActivity"></activity>
-        <activity android:name=".SqLiteDatabase.AddActivity"></activity>
-        <activity android:name=".Sensor.SensorActivity"></activity>
-        <activity android:name=".Service.StartServiceActivity"></activity>
-        <activity android:name=".Service.BoundServiceActivity"></activity>
-        <activity android:name=".ContentProvider.ContentProviderActivity"></activity>
+        <activity android:name=".GsonVolly.GsonVollyActivity" />
+        <activity android:name=".FCM.FireBaseActivity" />
+        <activity android:name=".PushNotification.PushNotificationActivity" />
+        <activity android:name=".SqLiteDatabase.DataBaseActivity" />
+        <activity android:name=".GlidePicasso.GlidePicassoActivity" />
+        <activity android:name=".SqLiteDatabase.AddActivity" />
+        <activity android:name=".Sensor.SensorActivity" />
+        <activity android:name=".Service.StartServiceActivity" />
+        <activity android:name=".Service.BoundServiceActivity" />
+        <activity android:name=".ContentProvider.ContentProviderActivity" />
 
         <provider
             android:name=".ContentProvider.MyProvider"
             android:authorities="com.androiditems.mitu.androiditems.ContentProvider.MyProvider"
             android:exported="true"
-            android:multiprocess="true" >
-        </provider>
+            android:multiprocess="true" />
+
+        <activity android:name=".Handler.HandlerActivity" />
+        <activity android:name=".HttpUrl.HttpurlConnectionActivity"></activity>
     </application>
 
 </manifest>
