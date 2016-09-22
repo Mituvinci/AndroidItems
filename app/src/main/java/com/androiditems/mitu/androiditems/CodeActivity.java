@@ -7,6 +7,8 @@ import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.androiditems.mitu.androiditems.Handler.HandlerActivity;
+
 public class CodeActivity extends AppCompatActivity {
     private static final String FILE = "file";
     private LinearLayout mLoginLinearLayout;
@@ -623,9 +625,7 @@ public class CodeActivity extends AppCompatActivity {
 
     }
 
-    public void contentProvider(View view){
 
-    }
 
 
     public void webApp(View view){
@@ -651,7 +651,9 @@ public class CodeActivity extends AppCompatActivity {
 
 
     public void json(View view){
-
+        Intent i = new Intent(getApplicationContext(),ShowCodeActivity.class);
+        i.putExtra(FILE,"HttpurlConnectionActivity.txt");
+        startActivity(i);
     }
 
     public void glide(View view){
@@ -671,6 +673,18 @@ public class CodeActivity extends AppCompatActivity {
     }
     public void sharedPreference(View view){
 
+        Intent i = new Intent(getApplicationContext(),ShowCodeActivity.class);
+        i.putExtra(FILE,"SharedpreferanceActivity.txt");
+        startActivity(i);
+
+    }
+
+
+    public void handler(View view){
+
+        Intent i = new Intent(getApplicationContext(),ShowCodeActivity.class);
+        i.putExtra(FILE,"HandlerActivity.txt");
+        startActivity(i);
 
     }
 
