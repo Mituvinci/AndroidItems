@@ -7,8 +7,6 @@ import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.androiditems.mitu.androiditems.Handler.HandlerActivity;
-
 public class CodeActivity extends AppCompatActivity {
     private static final String FILE = "file";
     private LinearLayout mLoginLinearLayout;
