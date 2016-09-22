@@ -619,9 +619,7 @@ public class CodeActivity extends AppCompatActivity {
         i.putExtra(FILE,"ViewPagerActivity.txt");
         startActivity(i);
     }
-    public void sqliteDatabase(View view){
 
-    }
 
 
 
@@ -691,7 +689,9 @@ public class CodeActivity extends AppCompatActivity {
     }
 
     public void storeDatainaFile(View view){
-
+        Intent i = new Intent(getApplicationContext(),ShowCodeActivity.class);
+        i.putExtra(FILE,"ShowCodeActivity.txt");
+        startActivity(i);
     }
 
 }
