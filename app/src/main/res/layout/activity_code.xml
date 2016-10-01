@@ -156,6 +156,7 @@
                             android:gravity="center"
                             android:text="ContentProvider Manifest"
                             android:textSize="20sp" />
+
                         <TextView
                             android:id="@+id/contentProvidersactivityTextview"
                             android:layout_width="match_parent"
@@ -164,6 +165,7 @@
                             android:gravity="center"
                             android:text="ContentProvider Activity"
                             android:textSize="20sp" />
+
                         <TextView
                             android:id="@+id/contentProvidersTextview"
                             android:layout_width="match_parent"
@@ -509,16 +511,48 @@
                     </LinearLayout>
                 </LinearLayout>
 
-
-                <TextView
-                    android:id="@+id/retrofitTextview"
+                <LinearLayout
+                    android:id="@+id/retrofitLinearlayout"
                     android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:layout_gravity="center"
-                    android:gravity="center"
-                    android:onClick="retrofit"
-                    android:text="Retrofit"
-                    android:textSize="20sp" />
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/retrofitTextview"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:text="Retrofit"
+                        android:textSize="20sp" />
+
+                    <LinearLayout
+                        android:id="@+id/innerlinearretrofit"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#C6DEFC"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:id="@+id/retrofitSingltonTextview"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:text="Singleton retrofit"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/retrofitactivityTextview"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_gravity="center"
+                            android:text="Retrofit Activity"
+                            android:gravity="center"
+                            android:textSize="20sp" />
+                    </LinearLayout>
+                </LinearLayout>
 
                 <TextView
                     android:id="@+id/searchButton"
@@ -638,6 +672,7 @@
                             android:gravity="center"
                             android:text="Sensor Activity"
                             android:textSize="20sp" />
+
                         <TextView
 
                             android:id="@+id/accelerometerListenerTextview"
@@ -647,6 +682,7 @@
                             android:gravity="center"
                             android:text="AccelerometerListener"
                             android:textSize="20sp" />
+
                         <TextView
 
                             android:id="@+id/accelerometermanagerTextview"
@@ -755,6 +791,7 @@
                     android:onClick="storeDatainaFile"
                     android:text="Store Data in File"
                     android:textSize="20sp" />
+
                 <TextView
                     android:id="@+id/handlerTextview"
                     android:layout_width="match_parent"

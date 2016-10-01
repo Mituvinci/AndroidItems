@@ -78,6 +78,15 @@ public class CodeActivity extends AppCompatActivity {
     private TextView mContentProviderActivityMainTextView;
     private TextView mContentProviderManifestTextView;
     private TextView mContentProviderTextView;
+
+
+    private LinearLayout mRetrofitLinearlayout;
+    private LinearLayout mRetrofitInnerLinearLayout;
+    private TextView mRetrofitTextView;
+    private TextView mRetrofitActivityMainTextView;
+    private TextView mRetrofitSingletonTextView;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -157,6 +166,14 @@ public class CodeActivity extends AppCompatActivity {
         mContentProviderManifestTextView = (TextView) findViewById(R.id.contentProvidersmanifestTextview);
         mContentProviderTextView = (TextView) findViewById(R.id.contentProvidersTextview);
 
+
+        mRetrofitLinearlayout = (LinearLayout) findViewById(R.id.retrofitLinearlayout);
+        mRetrofitInnerLinearLayout = (LinearLayout) findViewById(R.id.innerlinearretrofit);
+        mRetrofitTextView = (TextView) findViewById(R.id.retrofitTextview);
+        mRetrofitActivityMainTextView = (TextView) findViewById(R.id.retrofitactivityTextview);
+        mRetrofitSingletonTextView = (TextView) findViewById(R.id.retrofitSingltonTextview);
+
+        retrofit();
         contentProvider();
         sensor();
         service();
@@ -168,6 +185,39 @@ public class CodeActivity extends AppCompatActivity {
         music();
     }
 
+
+    public void retrofit(){
+
+        mRetrofitLinearlayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                mRetrofitInnerLinearLayout.setVisibility(View.VISIBLE);
+                mRetrofitTextView.setVisibility(View.GONE);
+            }
+        });
+
+        mRetrofitActivityMainTextView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getApplicationContext(),ShowCodeActivity.class);
+                i.putExtra(FILE, "RetrofitActivity.txt");
+                startActivity(i);
+            }
+        });
+
+        mRetrofitSingletonTextView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getApplicationContext(),ShowCodeActivity.class);
+                i.putExtra(FILE, "RetrofitSingletone.txt");
+                startActivity(i);
+            }
+        });
+
+
+
+    }
     public void contentProvider(){
 
         mContentProviderMainLinearlayout.setOnClickListener(new View.OnClickListener() {
