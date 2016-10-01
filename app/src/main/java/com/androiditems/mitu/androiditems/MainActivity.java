@@ -22,6 +22,7 @@ import com.androiditems.mitu.androiditems.HttpUrl.HttpurlConnectionActivity;
 import com.androiditems.mitu.androiditems.Login.LoginActivity;
 import com.androiditems.mitu.androiditems.MusicPlayer.MusicListActivity;
 import com.androiditems.mitu.androiditems.Navigation.NavigationDrawerActivity;
+import com.androiditems.mitu.androiditems.Retrofit.RetrofitActivity;
 import com.androiditems.mitu.androiditems.Searchable.SearchActivity;
 import com.androiditems.mitu.androiditems.Sensor.SensorActivity;
 import com.androiditems.mitu.androiditems.Service.StartServiceActivity;
@@ -140,6 +141,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void retrofit(View view){
+        startActivity(new Intent(MainActivity.this, RetrofitActivity.class));
 
     }
 

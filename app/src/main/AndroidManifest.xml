@@ -97,7 +97,8 @@
             android:multiprocess="true" />
 
         <activity android:name=".Handler.HandlerActivity" />
-        <activity android:name=".HttpUrl.HttpurlConnectionActivity"></activity>
+        <activity android:name=".HttpUrl.HttpurlConnectionActivity" />
+        <activity android:name=".Retrofit.RetrofitActivity"></activity>
     </application>
 
 </manifest>

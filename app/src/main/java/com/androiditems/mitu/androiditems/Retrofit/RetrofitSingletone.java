@@ -1,0 +1,32 @@
+package com.androiditems.mitu.androiditems.Retrofit;
+
+import android.content.Context;
+
+import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
+
+/**
+ * Created by mitu on 10/1/16.
+ */
+
+public class RetrofitSingletone {
+    private static Context mContext;
+    private static Retrofit mRetrofit;
+
+    public RetrofitSingletone() {
+    }
+
+    public static synchronized Retrofit getInstance(Context context){
+        mContext = context;
+        if (mRetrofit == null){
+            createRetrofit();
+        }
+        return  mRetrofit;
+    }
+
+
+    public static void  createRetrofit(){
+
+        mRetrofit = new Retrofit.Builder().baseUrl("http://api.ajkerdeal.com").addConverterFactory(GsonConverterFactory.create()).build();
+    }
+}
