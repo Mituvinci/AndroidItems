@@ -12,6 +12,7 @@ import com.androiditems.mitu.androiditems.Broadcast.BroadCastActivity;
 import com.androiditems.mitu.androiditems.Camera.CameraActivity;
 import com.androiditems.mitu.androiditems.Connectivity.NetworkConnectivityActivity;
 import com.androiditems.mitu.androiditems.ContentProvider.ContentProviderActivity;
+import com.androiditems.mitu.androiditems.DeviceId.DeviceIdActivity;
 import com.androiditems.mitu.androiditems.Dialog.ShowDialogFragment;
 import com.androiditems.mitu.androiditems.FCM.FireBaseActivity;
 import com.androiditems.mitu.androiditems.GlidePicasso.GlidePicassoActivity;
@@ -73,6 +74,11 @@ public class MainActivity extends AppCompatActivity {
 
     public void camera(View view){
         startActivity(new Intent(MainActivity.this, CameraActivity.class));
+
+    }
+
+    public void deviceid(View view){
+        startActivity(new Intent(MainActivity.this, DeviceIdActivity.class));
 
     }
 

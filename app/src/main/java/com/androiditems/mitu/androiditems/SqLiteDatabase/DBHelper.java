@@ -24,7 +24,6 @@ public class DBHelper extends SQLiteOpenHelper {
     public static final String QUERY_CREATE = "CREATE TABLE IF NOT EXISTS "+TABLE_CONTACT+" ("+
             CONTACT_ID +" INTEGER PRIMARY KEY AUTOINCREMENT, " +
             CONTACT_NAME +" VARCHAR(100)); "
-
             ;
 
     public static final String QUERY_DROP = "DROP TABLE IF EXISTS "+TABLE_CONTACT;
