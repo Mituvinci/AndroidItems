@@ -2,6 +2,7 @@ package com.androiditems.mitu.androiditems.DeviceId;
 
 import android.content.Context;
 import android.net.wifi.WifiManager;
+import android.os.Build;
 import android.os.Bundle;
 import android.provider.Settings;
 import android.support.v7.app.AppCompatActivity;
@@ -31,6 +32,7 @@ public class DeviceIdActivity extends AppCompatActivity {
         TextView textViewDeviceId = (TextView) findViewById(R.id.TextViewdeviceId);
         TextView textViewWifiaddress = (TextView) findViewById(R.id.TextViewwifimacAddress);
         TextView textViewLocalAddress = (TextView) findViewById(R.id.TextViewlocalAddress);
+        TextView textViewDeviceName = (TextView) findViewById(R.id.TextViewdeviceName);
 
         final String tmDevice, tmSerial, androidId;
         tmDevice = "" + telephonyManagerm.getDeviceId();
@@ -52,13 +54,14 @@ public class DeviceIdActivity extends AppCompatActivity {
         textViewDeviceId.setText(android_id);
         textViewWifiaddress.setText(ip);
         textViewLocalAddress.setText(localip);
+        textViewDeviceName.setText(getDeviceName()+"");
 
 
 
 
     }
 
-    public String getLocalIpAddress() {
+    private String getLocalIpAddress() {
         try {
             for (Enumeration<NetworkInterface> en = NetworkInterface.getNetworkInterfaces(); en.hasMoreElements();) {
                 NetworkInterface intf = en.nextElement();
@@ -75,5 +78,14 @@ public class DeviceIdActivity extends AppCompatActivity {
            // Log.e(TAG, ex.toString());
         }
         return null;
+    }
+
+    private String   getDeviceName() {
+        String manufacturer = Build.MANUFACTURER;
+        String model = Build.MODEL;
+        if (model.startsWith(manufacturer)) {
+            return model;
+        }
+        return manufacturer+ " " + model;
     }
 }
