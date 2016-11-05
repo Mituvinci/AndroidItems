@@ -28,13 +28,15 @@ public  class SongsList {
     public static ArrayList<File> getSongList(File root) {
         ArrayList<File> al = new ArrayList<>();
         File[] files = root.listFiles();
+        if (files != null && root.exists()) {
 
-        for (int i = 0; i < files.length; i++) {
-            if (files[i].isDirectory() && !files[i].isHidden()) {
-                al.addAll(getSongList(files[i]));
-            } else if (files[i].getName().endsWith(".mp3")
-                    || files[i].getName().endsWith(".amr")) {
-                al.add(files[i]);
+            for (int i = 0; i < files.length; i++) {
+                if (files[i].isDirectory() && !files[i].isHidden()) {
+                    al.addAll(getSongList(files[i]));
+                } else if (files[i].getName().endsWith(".mp3")
+                        || files[i].getName().endsWith(".amr")) {
+                    al.add(files[i]);
+                }
             }
         }
         return al;
